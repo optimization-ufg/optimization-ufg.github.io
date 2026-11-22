@@ -5,6 +5,8 @@ hero: true
 {% assign M = site.data.members %}
 {% assign ntalks = 0 %}{% for s in site.seminars %}{% assign ntalks = ntalks | plus: s.talks.size %}{% endfor %}
 {% assign sems = site.seminars | sort: "semester" | reverse %}
+{% comment %}semestre mais recente que já tem palestras cadastradas{% endcomment %}
+{% for s in sems %}{% if s.talks.size > 0 %}{% assign cur = s %}{% break %}{% endif %}{% endfor %}
 <section class="band hero">
   <div class="contours" aria-hidden="true"></div>
   <div class="container">
@@ -53,12 +55,12 @@ hero: true
 <section class="section">
   <div class="container split">
     <div>
-      <div class="section-head"><div><p class="eyebrow">Seminar {{ sems.first.semester }}</p><h2 id="talks-h">Recent talks</h2></div><a class="more" href="{{ sems.first.url | relative_url }}">All talks</a></div>
+      <div class="section-head"><div><p class="eyebrow">Seminar {{ cur.semester }}</p><h2 id="talks-h">Recent talks</h2></div><a class="more" href="{{ cur.url | relative_url }}">All talks</a></div>
       <ul class="talk-mini" id="talk-mini">
-      {% for t in sems.first.talks %}{% unless t.canceled %}
+      {% for t in cur.talks %}{% unless t.canceled %}
         <li data-date="{{ t.date | date: '%Y-%m-%d' }}">
           <div class="datebadge"><span class="m">{{ t.date | date: "%b" }}</span><span class="d">{{ t.date | date: "%-d" }}</span></div>
-          <div><h3><a href="{{ sems.first.url | relative_url }}">{{ t.title | escape }}</a></h3><p>{{ t.speaker }}{% if t.affiliation %} · {{ t.affiliation }}{% endif %}</p></div>
+          <div><h3><a href="{{ cur.url | relative_url }}">{{ t.title | escape }}</a></h3><p>{{ t.speaker }}{% if t.affiliation %} · {{ t.affiliation }}{% endif %}</p></div>
         </li>{% endunless %}{% endfor %}
       </ul>
     </div>
