@@ -1,0 +1,30 @@
+---
+layout: default
+title: Members
+permalink: /members/
+---
+{% assign M = site.data.members %}
+<h2>Faculty</h2>
+<ul>
+{% for m in M.faculty %}  <li>{% if m.url %}<a href="{{ m.url }}">{{ m.name }}</a>{% else %}{{ m.name }}{% endif %} <span class="ids">{% if m.lattes %}<a href="{{ m.lattes }}">Lattes</a>{% endif %}{% if m.orcid %}<a href="https://orcid.org/{{ m.orcid }}">ORCID</a>{% endif %}{% if m.scholar %}<a href="https://scholar.google.com/citations?user={{ m.scholar }}">Scholar</a>{% endif %}</span></li>
+{% endfor %}</ul>
+<h2>Former faculty</h2>
+<ul>
+{% for m in M.former_faculty %}  <li>{% if m.url %}<a href="{{ m.url }}">{{ m.name }}</a>{% else %}{{ m.name }}{% endif %}{% if m.years %} ({{ m.years }}){% endif %} <span class="ids">{% if m.lattes %}<a href="{{ m.lattes }}">Lattes</a>{% endif %}{% if m.orcid %}<a href="https://orcid.org/{{ m.orcid }}">ORCID</a>{% endif %}{% if m.scholar %}<a href="https://scholar.google.com/citations?user={{ m.scholar }}">Scholar</a>{% endif %}</span></li>
+{% endfor %}</ul>
+<h2>Former postdoctoral researchers</h2>
+<ul>
+{% for m in M.postdocs %}  <li>{{ m.name }}{% if m.affiliation %} ({{ m.affiliation }}){% endif %}</li>
+{% endfor %}</ul>
+<h2>Current PhD students</h2>
+<ul>
+{% for m in M.phd_students %}  <li>{{ m.name }}</li>
+{% endfor %}</ul>
+<h2>PhD graduates</h2>
+<ul>
+{% for m in M.phd_graduates %}  <li>{{ m.name }}{% if m.year %} ({{ m.year }}){% endif %}{% if m.note %} · {% if m.note_url %}<a href="{{ m.note_url }}">{{ m.note }}</a>{% else %}{{ m.note }}{% endif %}{% endif %} <span class="ids">{% if m.lattes %}<a href="{{ m.lattes }}">Lattes</a>{% endif %}</span></li>
+{% endfor %}</ul>
+<h2>Master's graduates</h2>
+<ul>
+{% for m in M.masters_graduates %}  <li>{{ m.name }}{% if m.year %} ({{ m.year }}){% endif %}</li>
+{% endfor %}</ul>

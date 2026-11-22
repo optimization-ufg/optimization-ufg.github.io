@@ -1,0 +1,19 @@
+title: Continuous Optimization Group
+subtitle: Institute of Mathematics and Statistics · Federal University of Goiás
+description: Continuous Optimization Group at the Institute of Mathematics and Statistics, Federal University of Goiás (IME/UFG).
+baseurl: ""
+
+collections:
+  seminars:
+    output: true
+    permalink: /seminars/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: seminars
+    values:
+      layout: seminar
+
+exclude:
+  - README.md

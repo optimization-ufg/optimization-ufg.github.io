@@ -1,0 +1,1514 @@
+# Artigos publicados por membros do grupo enquanto na UFG.
+# A página agrupa por ano e ordena pelos autores; a ordem neste arquivo não importa.
+# Artigo aceito que ainda não saiu num número da revista: use "status: to appear".
+
+- year: 2027
+  status: to appear
+  authors: Gonçalves, M. L. N.
+  title: Subsampled cubic regularization method with distinct sample sizes for function, gradient, and Hessian
+  journal: Computational and Applied Mathematics
+  volume: "46"
+  issue: "1"
+  pages: "38"
+  doi: 10.1007/s40314-026-03892-1
+- year: 2026
+  authors: Andreani, R.; Couto, K. R.; Ferreira, O. P.; Haeser, G.; Prudente, L. F.
+  title: Global convergence of an augmented Lagrangian method for nonlinear programming via Riemannian optimization
+  journal: SIAM Journal on Optimization
+  volume: "36"
+  issue: "1"
+  pages: 466–501
+  doi: 10.1137/24m1692319
+- year: 2026
+  authors: Ansari, Q. H.; Ferreira, O. P.; Uddin, M.; Alshahrani, M.
+  title: Iteration of complexity and asymptotic analysis of gradient-type methods with non-monotone line search on Riemannian manifolds
+  journal: Journal of Scientific Computing
+  volume: "109"
+  issue: "2"
+  pages: "35"
+  doi: 10.1007/s10915-026-03456-9
+- year: 2026
+  status: to appear
+  authors: Babu, F.; Ferreira, O. P.; Zhao, X.
+  title: A Riemannian heavy-ball method with global convergence under the Riemannian Polyak–Łojasiewicz condition
+  journal: Optimization
+  pages: 1–26
+  doi: 10.1080/02331934.2026.2736673
+- year: 2026
+  authors: Bento, G. C.; Santiago, C. R.
+  title: On the convergence and properties of a proximal-gradient method on Hadamard manifolds
+  journal: Journal of Nonlinear and Variational Analysis
+  volume: "10"
+  issue: "3"
+  doi: 10.23952/jnva.10.2026.3.06
+- year: 2026
+  authors: Bento, G. C.; Mota, T. S.
+  title: Convergence rate of inexact gradient methods for functions satisfying the Łojasiewicz inequality
+  journal: Optimization
+  volume: "75"
+  issue: "13"
+  pages: 3699–3708
+  doi: 10.1080/02331934.2026.2627997
+- year: 2026
+  authors: Bento, G. C.; Ferreira, O. P.; Papa Quiroz, E. A.
+  title: Approximate proximal methods for variational inequalities on Hadamard manifolds
+  journal: Optimization
+  volume: "75"
+  issue: "4"
+  pages: 669–686
+  doi: 10.1080/02331934.2024.2404164
+- year: 2026
+  status: to appear
+  authors: Birgin, E. G.; Ferreira, O. P.; Haeser, G.; Maculan, N.; Mallma Ramirez, L.; Prudente, L. F.
+  title: Smoothing ℓ1-exact penalty method for intrinsically constrained Riemannian optimization problems
+  journal: IMA Journal of Numerical Analysis
+  pages: drag043
+  doi: 10.1093/imanum/drag043
+- year: 2026
+  authors: Díaz Millán, R.; Ferreira, O. P.; Louzeiro, M. S.; Ugon, J.
+  title: A Busemann hybrid projection-proximal point algorithm for optimization problems on Hadamard manifolds
+  journal: Applied Mathematics and Optimization
+  volume: "94"
+  issue: "2"
+  pages: "31"
+  doi: 10.1007/s00245-026-10477-1
+- year: 2026
+  authors: Díaz Millán, R.; Ferreira, O. P.; Ugon, J.
+  title: Frank–Wolfe algorithms for piecewise star-convex functions with a nonsmooth difference-of-convex structure
+  journal: Journal of Optimization Theory and Applications
+  volume: "211"
+  issue: "1"
+  pages: "13"
+  doi: 10.1007/s10957-026-03119-7
+- year: 2026
+  authors: Díaz Millán, R.; Ferreira, O. P.; Ugon, J.
+  title: Frank–Wolfe algorithm for star-convex functions
+  journal: Optimization Letters
+  volume: "20"
+  issue: "8"
+  pages: 1577–1591
+  doi: 10.1007/s11590-026-02307-8
+- year: 2026
+  authors: Fazzio, N.; Prudente, L. F.; Schuverdt, M. L.
+  title: "The projected gradient direction in vector optimization: Continuity and dual characterization"
+  journal: Computational and Applied Mathematics
+  volume: "45"
+  issue: "6"
+  pages: "261"
+  doi: 10.1007/s40314-025-03611-2
+- year: 2026
+  authors: Ferreira, O. P.; Mordukhovich, B. S.; Santos, W. M. S.; Souza, J. C. O.
+  title: An inexact boosted difference of convex algorithm for nondifferentiable functions
+  journal: Journal of Optimization Theory and Applications
+  volume: "208"
+  issue: "2"
+  pages: "71"
+  doi: 10.1007/s10957-025-02895-y
+- year: 2026
+  status: to appear
+  authors: Gonçalves, D. S.; Gonçalves, M. L. N.; Melo, J. G.
+  title: A cubic regularization method for multiobjective optimization
+  journal: Computational Optimization and Applications
+  doi: 10.1007/s10589-026-00847-4
+- year: 2026
+  status: to appear
+  authors: Gonçalves, M. L. N.; Grapiglia, G. N.
+  title: Subsampled trust-region methods with deterministic worst-case complexity guarantees
+  journal: IMA Journal of Numerical Analysis
+  pages: drag111
+  doi: 10.1093/imanum/drag111
+- year: 2026
+  status: to appear
+  authors: Gonçalves, M. L. N.; Grapiglia, G. N.; Melo, J. G.
+  title: An adaptive line-search-free multiobjective gradient method and its iteration-complexity analysis
+  journal: Computational Optimization and Applications
+  doi: 10.1007/s10589-026-00846-5
+- year: 2026
+  authors: Guesser, L.; Queiroz, T. A.; Keidi Miyazawa, F.
+  title: A tree search-based heuristic for the three-dimensional single container loading problem
+  journal: European Journal of Operational Research
+  volume: "333"
+  issue: "2"
+  pages: 337–348
+  doi: 10.1016/j.ejor.2026.01.039
+- year: 2026
+  authors: Martin, M.; Amorim, F.; Ferreira, M.; Queiroz, T. A.; Morabito, R.
+  title: Models for the two-dimensional open-dimension rectangular packing problem
+  journal: Engineering Optimization
+  volume: "58"
+  issue: "7"
+  pages: 2128–2144
+  doi: 10.1080/0305215x.2025.2551024
+- year: 2026
+  status: to appear
+  authors: Nascimento, O. X.; Andretta, M.; Alem, D.
+  title: Two-dimensional irregular strip packing problem under demand uncertainty via two-stage stochastic programming
+  journal: International Transactions in Operational Research
+  pages: itor.70299
+  doi: 10.1111/itor.70299
+- year: 2026
+  status: to appear
+  authors: Pei, Y.; Lin, Y.; Shao, S.; Louzeiro, M. S.; Zhu, D.
+  title: A scalable sequential adaptive cubic regularization algorithm for optimization with general equality constraints
+  journal: Numerical Algorithms
+  doi: 10.1007/s11075-026-02401-z
+- year: 2026
+  authors: Peng, J.-W.; Sun, H.; Ferreira, O. P.; Yao, J.-C.
+  title: The generalized conditional gradient method for multiobjective composite optimization problems with non-monotone line search
+  journal: Optimization Methods and Software
+  volume: "41"
+  issue: "3"
+  pages: 629–657
+  doi: 10.1080/10556788.2026.2640936
+- year: 2026
+  status: to appear
+  authors: Peng, J.-W.; Zhang, J.-W.; Ferreira, O. P.; Yao, J.-C.
+  title: A spectral conjugate gradient algorithm for vector optimization
+  journal: Optimization Methods and Software
+  pages: 1–33
+  doi: 10.1080/10556788.2026.2705555
+- year: 2026
+  authors: Upadhyay, B. B.; Poddar, S.; Ferreira, O. P.; Zhao, X.; Yao, J.-C.
+  title: An inexact proximal point method with quasi-distance for quasiconvex multiobjective optimization problems on Riemannian manifolds
+  journal: Numerical Algorithms
+  volume: "102"
+  issue: "2"
+  pages: 1265–1315
+  doi: 10.1007/s11075-025-02177-8
+- year: 2025
+  authors: Assunção, P. B.; Ferreira, O. P.; Prudente, L. F.
+  title: A generalized conditional gradient method for multiobjective composite optimization problems
+  journal: Optimization
+  volume: "74"
+  issue: "2"
+  pages: 473–503
+  doi: 10.1080/02331934.2023.2257709
+- year: 2025
+  authors: Bello Cruz, J. Y.; Melo, J. G.; Prudente, L. F.; Serra, R. V. G.
+  title: A proximal gradient method with an explicit line search for multiobjective optimization
+  journal: Computational Optimization and Applications
+  volume: "92"
+  issue: "2"
+  pages: 437–469
+  doi: 10.1007/s10589-025-00711-x
+- year: 2025
+  authors: Bello Cruz, J. Y.; Gonçalves, M. L. N.; Melo, J. G.; Mohr, C.
+  title: A relative inexact proximal gradient method with an explicit linesearch
+  journal: Journal of Optimization Theory and Applications
+  volume: "206"
+  issue: "1"
+  pages: "9"
+  doi: 10.1007/s10957-025-02684-7
+- year: 2025
+  authors: Bento, G. C.; Cruz Neto, J. X.; Lopes, J. O.; Mordukhovich, B. S.; Silva Filho, P. R.
+  title: A refined proximal algorithm for nonconvex multiobjective optimization in Hilbert spaces
+  journal: Journal of Global Optimization
+  volume: "92"
+  issue: "1"
+  pages: 187–203
+  doi: 10.1007/s10898-024-01453-6
+- year: 2025
+  authors: Bento, G. C.; Mordukhovich, B. S.; Mota, T. S.; Nesterov, Y.
+  title: Convergence of descent optimization algorithms under Polyak-Łojasiewicz-Kurdyka conditions
+  journal: Journal of Optimization Theory and Applications
+  volume: "207"
+  issue: "3"
+  pages: "41"
+  doi: 10.1007/s10957-025-02816-z
+- year: 2025
+  status: to appear
+  authors: Bergmann, R.; Ferreira, O. P.; Németh, S. Z.; Zhu, J.
+  title: On projection mappings and the gradient projection method on hyperbolic space forms
+  journal: IMA Journal of Numerical Analysis
+  pages: draf097
+  doi: 10.1093/imanum/draf097
+- year: 2025
+  authors: Da SILVA JUNIOR, P. C.; Ferreira, O. P.; Silva, G. N.
+  title: Broyden quasi-Newton secant-type method for solving constrained mixed generalized equations
+  journal: Journal of Nonlinear and Variational Analysis
+  volume: "9"
+  issue: "4"
+  doi: 10.23952/jnva.9.2025.4.04
+- year: 2025
+  authors: Donizette, A. C.; Rocco, C. D.; Queiroz, T. A.
+  title: Predicting leishmaniasis outbreaks in Brazil using machine learning models based on disease surveillance and meteorological data
+  journal: Operations Research for Health Care
+  volume: "44"
+  pages: "100453"
+  doi: 10.1016/j.orhc.2024.100453
+- year: 2025
+  authors: Ferreira, K. M.; Munari, P.; Queiroz, T. A.; Archetti, C.; Morabito, R.
+  title: Exact methods for the split delivery vehicle routing problem with two-dimensional loading constraints
+  journal: Networks
+  volume: "86"
+  issue: "4"
+  pages: 361–388
+  doi: 10.1002/net.70000
+- year: 2025
+  authors: Gonçalves, D. S.; Gonçalves, M. L. N.; Melo, J. G.
+  title: Improved convergence rates for the multiobjective Frank–Wolfe method
+  journal: Journal of Optimization Theory and Applications
+  volume: "205"
+  issue: "2"
+  pages: "20"
+  doi: 10.1007/s10957-025-02630-7
+- year: 2025
+  authors: Gonçalves, M. L. N.
+  title: Subsampled cubic regularization method for finite-sum minimization
+  journal: Optimization
+  volume: "74"
+  issue: "7"
+  pages: 1591–1614
+  doi: 10.1080/02331934.2024.2318258
+- year: 2025
+  authors: Louzeiro, M. S.; Silva, G. N.; Yuan, J.; Zhang, D.
+  title: An adaptive cubic regularization inexact-Newton method on Riemannian manifolds
+  journal: Journal of Scientific Computing
+  volume: "105"
+  issue: "3"
+  pages: "69"
+  doi: 10.1007/s10915-025-03099-2
+- year: 2025
+  authors: Louzeiro, M. S.; Silva, G. N.; Yuan, J.; Zhang, D.
+  title: Inexact Newton methods for solving generalized equations on Riemannian manifolds
+  journal: Journal of Scientific Computing
+  volume: "103"
+  issue: "2"
+  pages: "67"
+  doi: 10.1007/s10915-025-02894-1
+- year: 2024
+  authors: Andreani, R.; Couto, K. R.; Ferreira, O. P.; Haeser, G.
+  title: Constraint qualifications and strong global convergence properties of an augmented Lagrangian method on Riemannian manifolds
+  journal: SIAM Journal on Optimization
+  volume: "34"
+  issue: "2"
+  pages: 1799–1825
+  doi: 10.1137/23m1582382
+- year: 2024
+  authors: Bento, G. C.; Cruz Neto, J. X.; Lopes, J. O.; Melo, Í. D. L.; Filho, P. S.
+  title: A new approach about equilibrium problems via Busemann functions
+  journal: Journal of Optimization Theory and Applications
+  volume: "200"
+  issue: "1"
+  pages: 428–436
+  doi: 10.1007/s10957-023-02356-4
+- year: 2024
+  authors: Bergmann, R.; Ferreira, O. P.; Santos, E. M.; Souza, J. C. O.
+  title: The difference of convex algorithm on Hadamard manifolds
+  journal: Journal of Optimization Theory and Applications
+  volume: "201"
+  issue: "1"
+  pages: 221–251
+  doi: 10.1007/s10957-024-02392-8
+- year: 2024
+  authors: da Silva, P.; Ferreira, O. P.; Secchin, L.; Silva, G. N.
+  title: Secant-inexact projection algorithms for solving a new class of constrained mixed generalized equations problems
+  journal: Journal of Computational and Applied Mathematics
+  volume: "440"
+  pages: "115638"
+  doi: 10.1016/j.cam.2023.115638
+- year: 2024
+  authors: Díaz Millán, R.; Ferreira, O. P.; Ugon, J.
+  title: Extragradient method with feasible inexact projection to variational inequality problem
+  journal: Computational Optimization and Applications
+  volume: "89"
+  issue: "2"
+  pages: 459–484
+  doi: 10.1007/s10589-024-00592-6
+- year: 2024
+  authors: Ferreira, O. P.; Santos, E. M.; Souza, J. C. O.
+  title: A boosted DC algorithm for non-differentiable DC components with non-monotone line search
+  journal: Computational Optimization and Applications
+  volume: "88"
+  issue: "3"
+  pages: 783–818
+  doi: 10.1007/s10589-024-00578-4
+- year: 2024
+  authors: Ferreira, O. P.; Németh, S. Z.; Zhu, J.
+  title: Convexity of sets and quadratic functions on the hyperbolic space
+  journal: Journal of Optimization Theory and Applications
+  volume: "202"
+  issue: "1"
+  pages: 421–455
+  doi: 10.1007/s10957-022-02073-4
+- year: 2024
+  authors: Ferreira, O. P.; Gao, Y.; Németh, S. Z.; Rigó, P. R.
+  title: Gradient projection method on the sphere, complementarity problems and copositivity
+  journal: Journal of Global Optimization
+  volume: "90"
+  issue: "1"
+  pages: 1–25
+  doi: 10.1007/s10898-024-01390-4
+- year: 2024
+  authors: Ferreira, O. P.; Rabelo, R.; Ribeiro, P.; Santos, E. M.; Souza, J. C. O.
+  title: Image denoising with a non-monotone boosted DCA for non-convex models
+  journal: Computers and Electrical Engineering
+  volume: "117"
+  pages: "109306"
+  doi: 10.1016/j.compeleceng.2024.109306
+- year: 2024
+  authors: Ferreira, O. P.; Gao, Y.; Németh, S. Z.
+  title: Reducing the projection onto the monotone extended second-order cone to the pool-adjacent-violators algorithm of isotonic regression
+  journal: Optimization
+  volume: "73"
+  issue: "2"
+  pages: 251–265
+  doi: 10.1080/02331934.2022.2103415
+- year: 2024
+  authors: Gonçalves, D. S.; Gonçalves, M. L. N.; Melo, J. G.
+  title: An away-step Frank–Wolfe algorithm for constrained multiobjective optimization
+  journal: Computational Optimization and Applications
+  volume: "88"
+  issue: "3"
+  pages: 759–781
+  doi: 10.1007/s10589-024-00577-5
+- year: 2024
+  authors: Melo, J. G.; Monteiro, R. D. C.; Wang, H.
+  title: A proximal augmented Lagrangian method for linearly constrained nonconvex composite optimization problems
+  journal: Journal of Optimization Theory and Applications
+  volume: "202"
+  issue: "1"
+  pages: 388–420
+  doi: 10.1007/s10957-023-02218-z
+- year: 2024
+  authors: Oliveira, R. M. M. D.; Queiroz, L. R. S.; Queiroz, T. A.
+  title: Otimização do transporte de pacientes em hospitais de grande porte
+  journal: Brazilian Journal of Production Engineering
+  volume: "10"
+  issue: "5"
+  pages: 210–220
+  doi: 10.47456/bjpe.v10i5.47033
+- year: 2024
+  authors: Prudente, L. F.; Souza, D. R.
+  title: Global convergence of a BFGS-type algorithm for nonconvex multiobjective optimization problems
+  journal: Computational Optimization and Applications
+  volume: "88"
+  issue: "3"
+  pages: 719–757
+  doi: 10.1007/s10589-024-00571-x
+- year: 2023
+  authors: Adona, V. A.; Gonçalves, M. L. N.
+  title: An inexact version of the symmetric proximal ADMM for solving separable convex optimization
+  journal: Numerical Algorithms
+  volume: "94"
+  issue: "1"
+  pages: 1–28
+  doi: 10.1007/s11075-022-01491-9
+- year: 2023
+  authors: Aguiar, A. A.; Ferreira, O. P.; Prudente, L. F.
+  title: Inexact gradient projection method with relative error tolerance
+  journal: Computational Optimization and Applications
+  volume: "84"
+  issue: "2"
+  pages: 363–395
+  doi: 10.1007/s10589-022-00425-4
+- year: 2023
+  authors: Bello Cruz, J. Y.; Gonçalves, M. L. N.; Krislock, N.
+  title: On FISTA with a relative error rule
+  journal: Computational Optimization and Applications
+  volume: "84"
+  issue: "2"
+  pages: 295–318
+  doi: 10.1007/s10589-022-00421-8
+- year: 2023
+  authors: Bento, G. C.; Cruz Neto, J. X.; Melo, Í. D. L.
+  title: Fenchel conjugate via Busemann function on Hadamard manifolds
+  journal: Applied Mathematics and Optimization
+  volume: "88"
+  issue: "3"
+  pages: "83"
+  doi: 10.1007/s00245-023-10060-y
+- year: 2023
+  authors: Díaz Millán, R.; Ferreira, O. P.; Ugon, J.
+  title: Approximate Douglas–Rachford algorithm for two-sets convex feasibility problems
+  journal: Journal of Global Optimization
+  volume: "86"
+  issue: "3"
+  pages: 621–636
+  doi: 10.1007/s10898-022-01264-7
+- year: 2023
+  authors: Ferreira, O. P.; Grapiglia, G. N.; Santos, E. M.; Souza, J. C. O.
+  title: A subgradient method with non-monotone line search
+  journal: Computational Optimization and Applications
+  volume: "84"
+  issue: "2"
+  pages: 397–420
+  doi: 10.1007/s10589-022-00438-z
+- year: 2023
+  authors: Ferreira, O. P.; Németh, S. Z.; Zhu, J.
+  title: Convexity of non-homogeneous quadratic functions on the hyperbolic space
+  journal: Journal of Optimization Theory and Applications
+  volume: "199"
+  issue: "3"
+  pages: 1085–1105
+  doi: 10.1007/s10957-023-02332-y
+- year: 2023
+  authors: Ferreira, O. P.; Jean-Alexis, C.; Piétrus, A.; Silva, G. N.
+  title: On Newton's method for solving generalized equations
+  journal: Journal of Complexity
+  volume: "74"
+  pages: "101697"
+  doi: 10.1016/j.jco.2022.101697
+- year: 2023
+  authors: Gonçalves, M. L. N.; Menezes, T. C.
+  title: A framework for convex-constrained monotone nonlinear equations and its special cases
+  journal: Computational and Applied Mathematics
+  volume: "42"
+  issue: "7"
+  pages: "306"
+  doi: 10.1007/s40314-023-02446-z
+- year: 2023
+  authors: Kong, W.; Melo, J. G.; Monteiro, R. D. C.
+  title: Iteration complexity of an inner accelerated inexact proximal augmented Lagrangian method based on the classical Lagrangian function
+  journal: SIAM Journal on Optimization
+  volume: "33"
+  issue: "1"
+  pages: 181–210
+  doi: 10.1137/20M136147X
+- year: 2023
+  authors: Kong, W.; Melo, J. G.; Monteiro, R. D. C.
+  title: Iteration complexity of a proximal augmented Lagrangian method for solving nonconvex composite optimization problems with nonlinear convex constraints
+  journal: Mathematics of Operations Research
+  volume: "48"
+  issue: "2"
+  pages: 1066–1094
+  doi: 10.1287/moor.2022.1301
+- year: 2022
+  authors: Aguiar, A. A.; Ferreira, O. P.; Prudente, L. F.
+  title: Subgradient method with feasible inexact projections for constrained convex optimization problems
+  journal: Optimization
+  volume: "71"
+  issue: "12"
+  pages: 3515–3537
+  doi: 10.1080/02331934.2021.1902520
+- year: 2022
+  authors: Bello Cruz, J. Y.; Melo, J. G.; Serra, R. V. G.
+  title: A proximal gradient splitting method for solving convex vector optimization problems
+  journal: Optimization
+  volume: "71"
+  issue: "1"
+  pages: 33–53
+  doi: 10.1080/02331934.2020.1800699
+- year: 2022
+  authors: Bento, G. C.; Cruz Neto, J. X.; Soares, P. A.; Soubeyran, A.
+  title: "A new regularization of equilibrium problems on Hadamard manifolds: Applications to theories of desires"
+  journal: Annals of Operations Research
+  volume: "316"
+  issue: "2"
+  pages: 1301–1318
+  doi: 10.1007/s10479-021-04052-w
+- year: 2022
+  authors: Bento, G. C.; Cruz Neto, J. X.; Melo, Í. D. L.
+  title: "Combinatorial convexity in Hadamard manifolds: Existence for equilibrium problems"
+  journal: Journal of Optimization Theory and Applications
+  volume: "195"
+  issue: "3"
+  pages: 1087–1105
+  doi: 10.1007/s10957-022-02112-0
+- year: 2022
+  authors: Bento, G. C.; Cruz Neto, J. X.; Meireles, L. V.; Soubeyran, A.
+  title: "Pareto solutions as limits of collective traps: An inexact multiobjective proximal point algorithm"
+  journal: Annals of Operations Research
+  volume: "316"
+  issue: "2"
+  pages: 1425–1443
+  doi: 10.1007/s10479-022-04719-y
+- year: 2022
+  authors: Bortoloti, M. A. D. A.; Fernandes, T. A.; Ferreira, O. P.
+  title: An efficient damped Newton-type algorithm with globalization strategy on Riemannian manifolds
+  journal: Journal of Computational and Applied Mathematics
+  volume: "403"
+  pages: "113853"
+  doi: 10.1016/j.cam.2021.113853
+- year: 2022
+  authors: Ferreira, O. P.; Sosa, W. S.
+  title: On the Frank–Wolfe algorithm for non-compact constrained optimization problems
+  journal: Optimization
+  volume: "71"
+  issue: "1"
+  pages: 197–211
+  doi: 10.1080/02331934.2020.1860980
+- year: 2022
+  authors: Ferreira, O. P.; Lemes, M.; Prudente, L. F.
+  title: On the inexact scaled gradient projection method
+  journal: Computational Optimization and Applications
+  volume: "81"
+  issue: "1"
+  pages: 91–125
+  doi: 10.1007/s10589-021-00331-1
+- year: 2022
+  authors: Gonçalves, D. S.; Gonçalves, M. L. N.; Menezes, T. C.
+  title: Inexact variable metric method for convex-constrained optimization problems
+  journal: Optimization
+  volume: "71"
+  issue: "1"
+  pages: 145–163
+  doi: 10.1080/02331934.2021.1887181
+- year: 2022
+  authors: Gonçalves, M. L. N.; Lima, F. S.; Prudente, L. F.
+  title: A study of Liu-Storey conjugate gradient methods for vector optimization
+  journal: Applied Mathematics and Computation
+  volume: "425"
+  pages: "127099"
+  doi: 10.1016/j.amc.2022.127099
+- year: 2022
+  authors: Gonçalves, M. L. N.; Lima, F. S.; Prudente, L. F.
+  title: Globally convergent Newton-type methods for multiobjective optimization
+  journal: Computational Optimization and Applications
+  volume: "83"
+  issue: "2"
+  pages: 403–434
+  doi: 10.1007/s10589-022-00414-7
+- year: 2022
+  authors: Gonçalves, M. L. N.; Melo, J. G.; Monteiro, R. D. C.
+  title: Projection-free accelerated method for convex optimization
+  journal: Optimization Methods and Software
+  volume: "37"
+  issue: "1"
+  pages: 214–240
+  doi: 10.1080/10556788.2020.1734806
+- year: 2022
+  authors: Grapiglia, G. N.; Gonçalves, M. L. N.; Silva, G. N.
+  title: A cubic regularization of Newton’s method with finite difference Hessian approximations
+  journal: Numerical Algorithms
+  volume: "90"
+  issue: "2"
+  pages: 607–630
+  doi: 10.1007/s11075-021-01200-y
+- year: 2022
+  authors: Prudente, L. F.; Souza, D. R.
+  title: A quasi-Newton method with Wolfe line searches for multiobjective optimization
+  journal: Journal of Optimization Theory and Applications
+  volume: "194"
+  issue: "3"
+  pages: 1107–1140
+  doi: 10.1007/s10957-022-02072-5
+- year: 2021
+  authors: Assunção, P. B.; Ferreira, O. P.; Prudente, L. F.
+  title: Conditional gradient method for multiobjective optimization
+  journal: Computational Optimization and Applications
+  volume: "78"
+  issue: "3"
+  pages: 741–768
+  doi: 10.1007/s10589-020-00260-5
+- year: 2021
+  authors: Díaz Millán, R.; Ferreira, O. P.; Prudente, L. F.
+  title: Alternating conditional gradient method for convex feasibility problems
+  journal: Computational Optimization and Applications
+  volume: "80"
+  issue: "1"
+  pages: 245–269
+  doi: 10.1007/s10589-021-00293-4
+- year: 2021
+  authors: Gonçalves, D. S.; Gonçalves, M. L. N.; Oliveira, F. R.
+  title: An inexact projected LM type algorithm for solving convex constrained nonlinear equations
+  journal: Journal of Computational and Applied Mathematics
+  volume: "391"
+  pages: "113421"
+  doi: 10.1016/j.cam.2021.113421
+- year: 2021
+  authors: Iusem, A. N.; Melo, J. G.; Serra, R. V. G.
+  title: A strongly convergent proximal point method for vector optimization
+  journal: Journal of Optimization Theory and Applications
+  volume: "190"
+  issue: "1"
+  pages: 183–200
+  doi: 10.1007/s10957-021-01877-0
+- year: 2020
+  authors: Adona, V. A.; Gonçalves, M. L. N.; Melo, J. G.
+  title: An inexact proximal generalized alternating direction method of multipliers
+  journal: Computational Optimization and Applications
+  volume: "76"
+  issue: "3"
+  pages: 621–647
+  doi: 10.1007/s10589-020-00191-1
+- year: 2020
+  authors: Alves, M. M.; Eckstein, J.; Geremia, M.; Melo, J. G.
+  title: Relative-error inertial-relaxed inexact versions of Douglas-Rachford and ADMM splitting algorithms
+  journal: Computational Optimization and Applications
+  volume: "75"
+  issue: "2"
+  pages: 389–422
+  doi: 10.1007/s10589-019-00165-y
+- year: 2020
+  authors: Batista, E. E. A.; Bento, G. C.; Ferreira, O. P.
+  title: An extragradient-type algorithm for variational inequality on Hadamard manifolds
+  journal: "ESAIM: Control, Optimisation and Calculus of Variations"
+  volume: "26"
+  pages: "63"
+  doi: 10.1051/cocv/2019040
+- year: 2020
+  authors: Bento, G. C.; Bitar, S. D. B.; Cruz Neto, J. X.; Soubeyran, A.; Souza, J. C. O.
+  title: A proximal point method for difference of convex functions in multi-objective optimization with application to group dynamic problems
+  journal: Computational Optimization and Applications
+  volume: "75"
+  issue: "1"
+  pages: 263–290
+  doi: 10.1007/s10589-019-00139-0
+- year: 2020
+  authors: Bortoloti, M. A. D. A.; Fernandes, T. A.; Ferreira, O. P.; Yuan, J.
+  title: Damped Newton’s method on Riemannian manifolds
+  journal: Journal of Global Optimization
+  volume: "77"
+  issue: "3"
+  pages: 643–660
+  doi: 10.1007/s10898-020-00885-0
+- year: 2020
+  authors: de Oliveira, F. R.; Ferreira, O. P.
+  title: Inexact Newton method with feasible inexact projections for solving constrained smooth and nonsmooth equations
+  journal: Applied Numerical Mathematics
+  volume: "156"
+  pages: 63–76
+  doi: 10.1016/j.apnum.2020.04.012
+- year: 2020
+  authors: de Oliveira, F. R.; Ferreira, O. P.
+  title: Newton method for finding a singularity of a special class of locally Lipschitz continuous vector fields on Riemannian manifolds
+  journal: Journal of Optimization Theory and Applications
+  volume: "185"
+  issue: "2"
+  pages: 522–539
+  doi: 10.1007/s10957-020-01656-3
+- year: 2020
+  authors: Ferreira, O. P.; Louzeiro, M. S.; Prudente, L. F.
+  title: Iteration-complexity and asymptotic analysis of steepest descent method for multiobjective optimization on Riemannian manifolds
+  journal: Journal of Optimization Theory and Applications
+  volume: "184"
+  issue: "2"
+  pages: 507–533
+  doi: 10.1007/s10957-019-01615-7
+- year: 2020
+  authors: Ferreira, O. P.; Németh, S. Z.; Xiao, L.
+  title: On the spherical quasi-convexity of quadratic functions on spherically subdual convex sets
+  journal: Journal of Optimization Theory and Applications
+  volume: "187"
+  issue: "1"
+  pages: 1–21
+  doi: 10.1007/s10957-020-01741-7
+- year: 2020
+  authors: Gonçalves, M. L. N.; Menezes, T. C.
+  title: Gauss–Newton methods with approximate projections for solving constrained nonlinear least squares problems
+  journal: Journal of Complexity
+  volume: "58"
+  pages: "101459"
+  doi: 10.1016/j.jco.2020.101459
+- year: 2020
+  authors: Gonçalves, M. L. N.; Prudente, L. F.
+  title: On the extension of the Hager–Zhang conjugate gradient method for vector optimization
+  journal: Computational Optimization and Applications
+  volume: "76"
+  issue: "3"
+  pages: 889–916
+  doi: 10.1007/s10589-019-00146-1
+- year: 2020
+  authors: Gonçalves, M. L. N.; Oliveira, F. R.
+  title: On the global convergence of an inexact quasi-Newton conditional gradient method for constrained nonlinear systems
+  journal: Numerical Algorithms
+  volume: "84"
+  issue: "2"
+  pages: 609–631
+  doi: 10.1007/s11075-019-00772-0
+- year: 2020
+  authors: Gonçalves, M. L. N.; Melo, J. G.; Monteiro, R. D. C.
+  title: On the iteration-complexity of a non-Euclidean hybrid proximal extragradient framework and of a proximal ADMM
+  journal: Optimization
+  volume: "69"
+  issue: "4"
+  pages: 847–873
+  doi: 10.1080/02331934.2019.1652297
+- year: 2020
+  authors: Kong, W.; Melo, J. G.; Monteiro, R. D. C.
+  title: An efficient adaptive accelerated inexact proximal point method for solving linearly constrained nonconvex composite problems
+  journal: Computational Optimization and Applications
+  volume: "76"
+  issue: "2"
+  pages: 305–346
+  doi: 10.1007/s10589-020-00188-w
+- year: 2019
+  authors: Adona, V. A.; Gonçalves, M. L. N.; Melo, J. G.
+  title: A partially inexact proximal alternating direction method of multipliers and its iteration-complexity analysis
+  journal: Journal of Optimization Theory and Applications
+  volume: "182"
+  issue: "2"
+  pages: 640–666
+  doi: 10.1007/s10957-019-01525-8
+- year: 2019
+  authors: Adona, V. A.; Gonçalves, M. L. N.; Melo, J. G.
+  title: Iteration-complexity analysis of a generalized alternating direction method of multipliers
+  journal: Journal of Global Optimization
+  volume: "73"
+  issue: "2"
+  pages: 331–348
+  doi: 10.1007/s10898-018-0697-z
+- year: 2019
+  authors: Bento, G. C.; Bitar, S. D. B.; Cruz Neto, J. X.; Oliveira, P. R.; Souza, J. C. O.
+  title: Computing Riemannian center of mass on Hadamard manifolds
+  journal: Journal of Optimization Theory and Applications
+  volume: "183"
+  issue: "3"
+  pages: 977–992
+  doi: 10.1007/s10957-019-01580-1
+- year: 2019
+  authors: de Oliveira, F. R.; Ferreira, O. P.; Silva, G. N.
+  title: Newton’s method with feasible inexact projections for solving constrained generalized equations
+  journal: Computational Optimization and Applications
+  volume: "72"
+  issue: "1"
+  pages: 159–177
+  doi: 10.1007/s10589-018-0040-0
+- year: 2019
+  authors: Ferreira, O. P.; Louzeiro, M. S.; Prudente, L. F.
+  title: Gradient method for optimization on Riemannian manifolds with lower bounded curvature
+  journal: SIAM Journal on Optimization
+  volume: "29"
+  issue: "4"
+  pages: 2517–2541
+  doi: 10.1137/18m1180633
+- year: 2019
+  authors: Ferreira, O. P.; Silva, G. N.
+  title: Inexact Newton method for non-linear functions with values in a cone
+  journal: Applicable Analysis
+  volume: "98"
+  issue: "8"
+  pages: 1461–1477
+  doi: 10.1080/00036811.2018.1430779
+- year: 2019
+  authors: Ferreira, O. P.; Louzeiro, M. S.; Prudente, L. F.
+  title: Iteration-complexity of the subgradient method on Riemannian manifolds with lower bounded curvature
+  journal: Optimization
+  volume: "68"
+  issue: "4"
+  pages: 713–729
+  doi: 10.1080/02331934.2018.1542532
+- year: 2019
+  authors: Ferreira, O. P.; Németh, S. Z.
+  title: On the spherical convexity of quadratic functions
+  journal: Journal of Global Optimization
+  volume: "73"
+  issue: "3"
+  pages: 537–545
+  doi: 10.1007/s10898-018-0710-6
+- year: 2019
+  authors: Ferreira, O. P.; Németh, S. Z.; Xiao, L.
+  title: On the spherical quasi-convexity of quadratic functions
+  journal: Linear Algebra and its Applications
+  volume: "562"
+  pages: 205–222
+  doi: 10.1016/j.laa.2018.10.011
+- year: 2019
+  authors: Gonçalves, M. L. N.; Melo, J. G.; Monteiro, R. D. C.
+  title: Convergence rate bounds for a proximal ADMM with over-relaxation stepsize parameter for solving non-convex linearly constrained problems
+  journal: Pacific Journal of Optimization
+  volume: "15"
+  pages: "379"
+- year: 2019
+  authors: Kong, W.; Melo, J. G.; Monteiro, R. D. C.
+  title: Complexity of a quadratic penalty accelerated inexact proximal point method for solving linearly constrained nonconvex composite programs
+  journal: SIAM Journal on Optimization
+  volume: "29"
+  issue: "4"
+  pages: 2566–2593
+  doi: 10.1137/18M1171011
+- year: 2019
+  authors: Lucambio Pérez, L. R.; Prudente, L. F.
+  title: A Wolfe line search algorithm for vector optimization
+  journal: ACM Transactions on Mathematical Software
+  volume: "45"
+  issue: "4"
+  pages: 1–23
+  doi: 10.1145/3342104
+- year: 2018
+  authors: Bento, G. C.; Ferreira, O. P.; Soubeyran, A.; Sousa Júnior, V. L. D.
+  title: "Inexact multi-objective local search proximal algorithms: Application to group dynamic and distributive justice problems"
+  journal: Journal of Optimization Theory and Applications
+  volume: "177"
+  issue: "1"
+  pages: 181–200
+  doi: 10.1007/s10957-018-1258-9
+- year: 2018
+  authors: Bento, G. C.; Ferreira, O. P.; Sousa Junior, V. L.
+  title: Proximal point method for a special class of nonconvex multiobjective optimization functions
+  journal: Optimization Letters
+  volume: "12"
+  issue: "2"
+  pages: 311–320
+  doi: 10.1007/s11590-017-1114-0
+- year: 2018
+  authors: Bento, G. C.; Cruz Neto, J. X.; de Meireles, L. V.
+  title: Proximal point method for locally Lipschitz functions in multiobjective optimization of Hadamard manifolds
+  journal: Journal of Optimization Theory and Applications
+  volume: "179"
+  issue: "1"
+  pages: 37–52
+  doi: 10.1007/s10957-018-1330-5
+- year: 2018
+  authors: Bento, G. C.; Ferreira, O. P.; Pereira, Y. R. L.
+  title: Proximal point method for vector optimization on Hadamard manifolds
+  journal: Operations Research Letters
+  volume: "46"
+  issue: "1"
+  pages: 13–18
+  doi: 10.1016/j.orl.2017.10.017
+- year: 2018
+  authors: Bento, G. C.; Cruz Neto, J. X.; López, G.; Soubeyran, A.; Souza, J. C. O.
+  title: The proximal point method for locally Lipschitz functions in multiobjective optimization with application to the compromise problem
+  journal: SIAM Journal on Optimization
+  volume: "28"
+  issue: "2"
+  pages: 1104–1120
+  doi: 10.1137/16M107534X
+- year: 2018
+  authors: Bento, G. C.; Bouza Allende, G.; Pereira, Y. R. L.
+  title: A Newton-like method for variable order vector optimization problems
+  journal: Journal of Optimization Theory and Applications
+  volume: "177"
+  issue: "1"
+  pages: 201–221
+  doi: 10.1007/s10957-018-1236-2
+- year: 2018
+  authors: Bento, G. C.; Cruz Neto, J. X.; Santos, P. S. M.; Souza, S. S.
+  title: A weighting subgradient algorithm for multiobjective optimization
+  journal: Optimization Letters
+  volume: "12"
+  issue: "2"
+  pages: 399–410
+  doi: 10.1007/s11590-017-1133-x
+- year: 2018
+  authors: Ferreira, O. P.; Silva, G. N.
+  title: Local convergence analysis of Newton's method for solving strongly regular generalized equations
+  journal: Journal of Mathematical Analysis and Applications
+  volume: "458"
+  issue: "1"
+  pages: 481–496
+  doi: 10.1016/j.jmaa.2017.09.023
+- year: 2018
+  authors: Ferreira, O. P.; Németh, S. Z.
+  title: How to project onto extended second order cones
+  journal: Journal of Global Optimization
+  volume: "70"
+  issue: "4"
+  pages: 707–718
+  doi: 10.1007/s10898-017-0587-9
+- year: 2018
+  authors: Gonçalves, M. L. N.; Oliveira, F. R.
+  title: An inexact Newton-like conditional gradient method for constrained nonlinear systems
+  journal: Applied Numerical Mathematics
+  volume: "132"
+  pages: 22–34
+  doi: 10.1016/j.apnum.2018.05.006
+- year: 2018
+  authors: Gonçalves, M. L. N.
+  title: On the pointwise iteration-complexity of a dynamic regularized ADMM with over-relaxation stepsize
+  journal: Applied Mathematics and Computation
+  volume: "336"
+  pages: 315–325
+  doi: 10.1016/j.amc.2018.04.066
+- year: 2018
+  authors: Gonçalves, M. L. N.; Alves, M. M.; Melo, J. G.
+  title: Pointwise and ergodic convergence rates of a variable metric proximal alternating direction method of multipliers
+  journal: Journal of Optimization Theory and Applications
+  volume: "177"
+  issue: "2"
+  pages: 448–478
+  doi: 10.1007/s10957-018-1232-6
+- year: 2018
+  authors: Lucambio Pérez, L. R.; Prudente, L. F.
+  title: Nonlinear conjugate gradient methods for vector optimization
+  journal: SIAM Journal on Optimization
+  volume: "28"
+  issue: "3"
+  pages: 2690–2720
+  doi: 10.1137/17m1126588
+- year: 2017
+  authors: Bello Cruz, J. Y.; Ferreira, O. P.; Németh, S. Z.; Prudente, L. F.
+  title: A semi-smooth Newton method for projection equations and linear complementarity problems with respect to the second order cone
+  journal: Linear Algebra and its Applications
+  volume: "513"
+  pages: 160–181
+  doi: 10.1016/j.laa.2016.10.007
+- year: 2017
+  authors: Bento, G. C.; Ferreira, O. P.; Melo, J. G.
+  title: Iteration-complexity of gradient, subgradient and proximal point methods on Riemannian manifolds
+  journal: Journal of Optimization Theory and Applications
+  volume: "173"
+  issue: "2"
+  pages: 548–562
+  doi: 10.1007/s10957-017-1093-4
+- year: 2017
+  authors: Bittencourt, T.; Ferreira, O. P.
+  title: Kantorovich’s theorem on Newton’s method under majorant condition in Riemannian manifolds
+  journal: Journal of Global Optimization
+  volume: "68"
+  issue: "2"
+  pages: 387–411
+  doi: 10.1007/s10898-016-0472-y
+- year: 2017
+  authors: Fernandes, T. A.; Ferreira, O. P.; Yuan, J.
+  title: On the superlinear convergence of Newton’s method on Riemannian manifolds
+  journal: Journal of Optimization Theory and Applications
+  volume: "173"
+  issue: "3"
+  pages: 828–843
+  doi: 10.1007/s10957-017-1107-2
+- year: 2017
+  authors: Ferreira, O. P.; Silva, G. N.
+  title: Kantorovich's theorem on Newton's method for solving strongly regular generalized equation
+  journal: SIAM Journal on Optimization
+  volume: "27"
+  issue: "2"
+  pages: 910–926
+  doi: 10.1137/16m1098012
+- year: 2017
+  authors: Ferreira, O. P.; Jean-Alexis, C.; Piétrus, A.
+  title: Metrically regular vector field and iterative processes for generalized equations in Hadamard manifolds
+  journal: Journal of Optimization Theory and Applications
+  volume: "175"
+  issue: "3"
+  pages: 624–651
+  doi: 10.1007/s10957-017-1195-z
+- year: 2017
+  authors: Gonçalves, M. L. N.; Melo, J. G.
+  title: A Newton conditional gradient method for constrained nonlinear systems
+  journal: Journal of Computational and Applied Mathematics
+  volume: "311"
+  pages: 473–483
+  doi: 10.1016/j.cam.2016.08.009
+- year: 2017
+  authors: Gonçalves, M. L. N.; Melo, J. G.; Monteiro, R. D. C.
+  title: Improved pointwise iteration-complexity of a regularized ADMM and of a regularized non-Euclidean HPE framework
+  journal: SIAM Journal on Optimization
+  volume: "27"
+  issue: "1"
+  pages: 379–407
+  doi: 10.1137/16M1055530
+- year: 2016
+  authors: Barrios, J.; Bello Cruz, J. Y.; Ferreira, O. P.; Németh, S. Z.
+  title: A semi-smooth Newton method for a special piecewise linear system with application to positively constrained convex quadratic programming
+  journal: Journal of Computational and Applied Mathematics
+  volume: "301"
+  pages: 91–100
+  doi: 10.1016/j.cam.2016.01.040
+- year: 2016
+  authors: Batista, E. E. A.; Bento, G. C.; Ferreira, O. P.
+  title: Enlargement of monotone vector fields and an inexact proximal point method for variational inequalities in Hadamard manifolds
+  journal: Journal of Optimization Theory and Applications
+  volume: "170"
+  issue: "3"
+  pages: 916–931
+  doi: 10.1007/s10957-016-0982-2
+- year: 2016
+  authors: Bello Cruz, J. Y.; Ferreira, O. P.; Prudente, L. F.
+  title: On the global convergence of the inexact semi-smooth Newton method for absolute value equation
+  journal: Computational Optimization and Applications
+  volume: "65"
+  issue: "1"
+  pages: 93–108
+  doi: 10.1007/s10589-016-9837-x
+- year: 2016
+  authors: Bento, G. C.; Cruz Neto, J. X.; Soubeyran, A.; de Sousa Júnior, V. L.
+  title: Dual descent methods as tension reduction systems
+  journal: Journal of Optimization Theory and Applications
+  volume: "171"
+  issue: "1"
+  pages: 209–227
+  doi: 10.1007/s10957-016-0994-y
+- year: 2016
+  authors: Bento, G. C.; Cruz Neto, J. X.; Oliveira, P. R.
+  title: "A new approach to the proximal point method: Convergence on general Riemannian manifolds"
+  journal: Journal of Optimization Theory and Applications
+  volume: "168"
+  issue: "3"
+  pages: 743–755
+  doi: 10.1007/s10957-015-0861-2
+- year: 2016
+  authors: Bento, G. C.; Cruz Neto, J. X.; Lopes, J. O.; Soares Jr, P. A.; Soubeyran, A.
+  title: Generalized proximal distances for bilevel equilibrium problems
+  journal: SIAM Journal on Optimization
+  volume: "26"
+  issue: "1"
+  pages: 810–830
+  doi: 10.1137/140975589
+- year: 2016
+  authors: Gonçalves, M. L. N.
+  title: Inexact Gauss-Newton like methods for injective-overdetermined systems of equations under a majorant condition
+  journal: Numerical Algorithms
+  volume: "72"
+  issue: "2"
+  pages: 377–392
+  doi: 10.1007/s11075-015-0050-2
+- year: 2015
+  authors: Barrios, J.; Ferreira, O. P.; Németh, S. Z.
+  title: Projection onto simplicial cones by Picard's method
+  journal: Linear Algebra and its Applications
+  volume: "480"
+  pages: 27–43
+  doi: 10.1016/j.laa.2015.03.040
+- year: 2015
+  authors: Batista, E. E. A.; Bento, G. C.; Ferreira, O. P.
+  title: An existence result for the generalized vector equilibrium problem on Hadamard manifolds
+  journal: Journal of Optimization Theory and Applications
+  volume: "167"
+  issue: "2"
+  pages: 550–557
+  doi: 10.1007/s10957-015-0761-5
+- year: 2015
+  authors: Bento, G. C.; Soubeyran, A.
+  title: "Generalized inexact proximal algorithms: Routine’s formation with resistance to change, following worthwhile changes"
+  journal: Journal of Optimization Theory and Applications
+  volume: "166"
+  issue: "1"
+  pages: 172–187
+  doi: 10.1007/s10957-015-0711-2
+- year: 2015
+  authors: Bento, G. C.; Soubeyran, A.
+  title: A generalized inexact proximal point method for nonsmooth functions that satisfies Kurdyka Lojasiewicz inequality
+  journal: Set-Valued and Variational Analysis
+  volume: "23"
+  issue: "3"
+  pages: 501–517
+  doi: 10.1007/s11228-015-0319-6
+- year: 2015
+  authors: Bento, G. C.; Ferreira, O. P.; Oliveira, P. R.
+  title: Proximal point method for a special class of nonconvex functions on Hadamard manifolds
+  journal: Optimization
+  volume: "64"
+  issue: "2"
+  pages: 289–319
+  doi: 10.1080/02331934.2012.745531
+- year: 2015
+  authors: Birgin, E. G.; Martínez, J. M.; Prudente, L. F.
+  title: Optimality properties of an augmented Lagrangian method on infeasible problems
+  journal: Computational Optimization and Applications
+  volume: "60"
+  issue: "3"
+  pages: 609–631
+  doi: 10.1007/s10589-014-9685-5
+- year: 2015
+  authors: Bittencourt, T.; Ferreira, O. P.
+  title: Local convergence analysis of inexact Newton method with relative residual error tolerance under majorant condition in Riemannian manifolds
+  journal: Applied Mathematics and Computation
+  volume: "261"
+  pages: 28–38
+  doi: 10.1016/j.amc.2015.03.080
+- year: 2015
+  authors: Burachik, R. S.; Iusem, A. N.; Melo, J. G.
+  title: The exact penalty map for nonsmooth and nonconvex optimization
+  journal: Optimization
+  volume: "64"
+  pages: 1–22
+- year: 2015
+  authors: Ferreira, O. P.; Németh, S. Z.
+  title: Projection onto simplicial cones by a semi-smooth Newton method
+  journal: Optimization Letters
+  volume: "9"
+  issue: "4"
+  pages: 731–741
+  doi: 10.1007/s11590-014-0775-1
+- year: 2015
+  authors: Ferreira, O. P.
+  title: A robust semi-local convergence analysis of Newton’s method for cone inclusion problems in Banach spaces under affine invariant majorant condition
+  journal: Journal of Computational and Applied Mathematics
+  volume: "279"
+  pages: 318–335
+  doi: 10.1016/j.cam.2014.11.019
+- year: 2015
+  authors: Gonçalves, M. L. N.; Melo, J. G.; Prudente, L. F.
+  title: Augmented Lagrangian methods for nonlinear programming with possible infeasibility
+  journal: Journal of Global Optimization
+  volume: "63"
+  issue: "2"
+  pages: 297–318
+  doi: 10.1007/s10898-015-0289-0
+- year: 2014
+  authors: Bello Cruz, J. Y.; Lucambio Pérez, L. R.
+  title: A subgradient-like algorithm for solving vector convex inequalities
+  journal: Journal of Optimization Theory and Applications
+  volume: "162"
+  issue: "2"
+  pages: 392–404
+  doi: 10.1007/s10957-013-0300-1
+- year: 2014
+  authors: Bello Cruz, J. Y.; Bouza Allende, G.; Lucambio Pérez, L. R.
+  title: Subgradient algorithms for solving variable inequalities
+  journal: Applied Mathematics and Computation
+  volume: "247"
+  pages: 1052–1063
+  doi: 10.1016/j.amc.2014.09.073
+- year: 2014
+  authors: Bento, G. C.; Cruz Neto, J. X.; Oliveira, P. R.; Soubeyran, A.
+  title: The self regulation problem as an inexact steepest descent method for multicriteria optimization
+  journal: European Journal of Operational Research
+  volume: "235"
+  issue: "3"
+  pages: 494–502
+  doi: 10.1016/j.ejor.2014.01.002
+- year: 2014
+  authors: Bento, G. C.; Cruz Neto, J. X.; Soubeyran, A.
+  title: A proximal point-type method for multicriteria optimization
+  journal: Set-Valued and Variational Analysis
+  volume: "22"
+  issue: "3"
+  pages: 557–573
+  doi: 10.1007/s11228-014-0279-2
+- year: 2014
+  authors: Bento, G. C.; Cruz Neto, J. X.
+  title: Finite termination of the proximal point method for convex functions on Hadamard manifolds
+  journal: Optimization
+  volume: "63"
+  issue: "9"
+  pages: 1281–1288
+  doi: 10.1080/02331934.2012.730050
+- year: 2014
+  authors: Birgin, E. G.; Martínez, J. M.; Prudente, L. F.
+  title: Augmented lagrangians with possible infeasibility and finite termination for global nonlinear programming
+  journal: Journal of Global Optimization
+  volume: "58"
+  issue: "2"
+  pages: 207–242
+  doi: 10.1007/s10898-013-0039-0
+- year: 2014
+  authors: Ferreira, O. P.; Iusem, A. N.; Németh, S. Z.
+  title: Concepts and techniques of optimization on the sphere
+  journal: TOP
+  volume: "22"
+  issue: "3"
+  pages: 1148–1170
+  doi: 10.1007/s11750-014-0322-3
+- year: 2013
+  authors: Bento, G. C.; Cruz Neto, J. X.; Santos, P. S. M.
+  title: An inexact steepest descent method for multicriteria optimization on Riemannian manifolds
+  journal: Journal of Optimization Theory and Applications
+  volume: "159"
+  issue: "1"
+  pages: 108–124
+  doi: 10.1007/s10957-013-0305-9
+- year: 2013
+  authors: Bento, G. C.; Cruz Neto, J. X.
+  title: A subgradient method for multiobjective optimization on Riemannian manifolds
+  journal: Journal of Optimization Theory and Applications
+  volume: "159"
+  issue: "1"
+  pages: 125–137
+  doi: 10.1007/s10957-013-0307-7
+- year: 2013
+  authors: Burachik, R. S.; Iusem, A. N.; Melo, J. G.
+  title: An inexact modified subgradient algorithm for primal-dual problems via augmented lagrangians
+  journal: Journal of Optimization Theory and Applications
+  volume: "157"
+  issue: "1"
+  pages: 108–131
+  doi: 10.1007/s10957-012-0158-7
+- year: 2013
+  authors: Cruz Neto, J. X.; Da Silva, G. J. P.; Ferreira, O. P.; Lopes, J. O.
+  title: A subgradient method for multiobjective optimization
+  journal: Computational Optimization and Applications
+  volume: "54"
+  issue: "3"
+  pages: 461–472
+  doi: 10.1007/s10589-012-9494-7
+- year: 2013
+  authors: Ferreira, O. P.; Gonçalves, M. L. N.; Oliveira, P. R.
+  title: Convergence of the Gauss--Newton method for convex composite optimization under a majorant condition
+  journal: SIAM Journal on Optimization
+  volume: "23"
+  issue: "3"
+  pages: 1757–1783
+  doi: 10.1137/110841606
+- year: 2013
+  authors: Ferreira, O. P.; Iusem, A. N.; Németh, S. Z.
+  title: Projections onto convex sets on the sphere
+  journal: Journal of Global Optimization
+  volume: "57"
+  issue: "3"
+  pages: 663–676
+  doi: 10.1007/s10898-012-9914-3
+- year: 2013
+  authors: Gonçalves, M. L. N.; Oliveira, P. R.
+  title: Convergence of the Gauss–Newton method for a special class of systems of equations under a majorant condition
+  journal: Optimization
+  pages: 1–18
+  doi: 10.1080/02331934.2013.778854
+- year: 2013
+  authors: Gonçalves, M. L. N.
+  title: Local convergence of the Gauss–Newton method for injective-overdetermined systems of equations under a majorant condition
+  journal: Computers and Mathematics with Applications
+  volume: "66"
+  issue: "4"
+  pages: 490–499
+  doi: 10.1016/j.camwa.2013.05.019
+- year: 2013
+  authors: Marques Alves, M.; Melo, J. G.
+  title: Strong convergence in Hilbert spaces via Γ-duality
+  journal: Journal of Optimization Theory and Applications
+  volume: "158"
+  issue: "2"
+  pages: 343–362
+  doi: 10.1007/s10957-012-0253-9
+- year: 2012
+  authors: Bento, G. C.; Melo, J. G.
+  title: Subgradient method for convex feasibility on Riemannian manifolds
+  journal: Journal of Optimization Theory and Applications
+  volume: "152"
+  issue: "3"
+  pages: 773–785
+  doi: 10.1007/s10957-011-9921-4
+- year: 2012
+  authors: Bento, G. C.; Ferreira, O. P.; Oliveira, P. R.
+  title: Unconstrained steepest descent method for multicriteria optimization on Riemannian manifolds
+  journal: Journal of Optimization Theory and Applications
+  volume: "154"
+  issue: "1"
+  pages: 88–107
+  doi: 10.1007/s10957-011-9984-2
+- year: 2012
+  authors: Ferreira, O. P.; Svaiter, B. F.
+  title: A robust Kantorovich’s theorem on the inexact Newton method with relative residual error tolerance
+  journal: Journal of Complexity
+  volume: "28"
+  issue: "3"
+  pages: 346–363
+  doi: 10.1016/j.jco.2012.02.002
+- year: 2012
+  authors: Ferreira, O. P.; Németh, S. Z.
+  title: Generalized isotone projection cones
+  journal: Optimization
+  volume: "61"
+  issue: "9"
+  pages: 1087–1098
+  doi: 10.1080/02331934.2010.538057
+- year: 2012
+  authors: Ferreira, O. P.; Németh, S. Z.
+  title: Generalized projections onto convex sets
+  journal: Journal of Global Optimization
+  volume: "52"
+  issue: "4"
+  pages: 831–842
+  doi: 10.1007/s10898-011-9714-1
+- year: 2012
+  authors: Ferreira, O. P.; Gonçalves, M. L. N.; Oliveira, P. R.
+  title: Local convergence analysis of inexact Gauss–Newton like methods under majorant condition
+  journal: Journal of Computational and Applied Mathematics
+  volume: "236"
+  issue: "9"
+  pages: 2487–2498
+  doi: 10.1016/j.cam.2011.12.008
+- year: 2012
+  authors: Ferreira, O. P.; Silva, R. C. M.
+  title: Local convergence of Newton's method under a majorant condition in Riemannian manifolds
+  journal: IMA Journal of Numerical Analysis
+  volume: "32"
+  issue: "4"
+  pages: 1696–1713
+  doi: 10.1093/imanum/drr048
+- year: 2011
+  authors: Bello Cruz, J. Y.; Lucambio Pérez, L. R.; Melo, J. G.
+  title: Convergence of the projected gradient method for quasiconvex multiobjective optimization
+  journal: "Nonlinear Analysis: Theory, Methods and Applications"
+  volume: "74"
+  issue: "16"
+  pages: 5268–5273
+  doi: 10.1016/j.na.2011.04.067
+- year: 2011
+  authors: Ferreira, O. P.; Gonçalves, M. L. N.
+  title: Local convergence analysis of inexact Newton-like methods under majorant condition
+  journal: Computational Optimization and Applications
+  volume: "48"
+  issue: "1"
+  pages: 1–21
+  doi: 10.1007/s10589-009-9249-2
+- year: 2011
+  authors: Ferreira, O. P.; Gonçalves, M. L. N.; Oliveira, P. R.
+  title: Local convergence analysis of the Gauss–Newton method under a majorant condition
+  journal: Journal of Complexity
+  volume: "27"
+  issue: "1"
+  pages: 111–125
+  doi: 10.1016/j.jco.2010.09.001
+- year: 2011
+  authors: Ferreira, O. P.
+  title: Local convergence of Newton’s method under majorant condition
+  journal: Journal of Computational and Applied Mathematics
+  volume: "235"
+  issue: "5"
+  pages: 1515–1522
+  doi: 10.1016/j.cam.2010.08.038
+- year: 2010
+  authors: Bello Cruz, J. Y.; Lucambio Pérez, L. R.
+  title: Convergence of a projected gradient method variant for quasiconvex objectives
+  journal: "Nonlinear Analysis: Theory, Methods and Applications"
+  volume: "73"
+  issue: "9"
+  pages: 2917–2922
+  doi: 10.1016/j.na.2010.06.051
+- year: 2010
+  authors: Bento, G. C.; Ferreira, O. P.; Oliveira, P. R.
+  title: Local convergence of the proximal point method for a special class of nonconvex functions on Hadamard manifolds
+  journal: "Nonlinear Analysis: Theory, Methods and Applications"
+  volume: "73"
+  issue: "2"
+  pages: 564–572
+  doi: 10.1016/j.na.2010.03.057
+- year: 2010
+  authors: Burachik, R. S.; Iusem, A. N.; Melo, J. G.
+  title: A primal dual modified subgradient algorithm with sharp Lagrangian
+  journal: Journal of Global Optimization
+  volume: "46"
+  issue: "3"
+  pages: 347–361
+  doi: 10.1007/s10898-009-9429-8
+- year: 2010
+  authors: Burachik, R. S.; Iusem, A. N.; Melo, J. G.
+  title: Duality and exact penalization for general augmented lagrangians
+  journal: Journal of Optimization Theory and Applications
+  volume: "147"
+  issue: "1"
+  pages: 125–140
+  doi: 10.1007/s10957-010-9711-4
+- year: 2009
+  authors: Ferreira, O. P.; Svaiter, B. F.
+  title: Kantorovich’s majorants principle for Newton’s method
+  journal: Computational Optimization and Applications
+  volume: "42"
+  issue: "2"
+  pages: 213–229
+  doi: 10.1007/s10589-007-9082-4
+- year: 2009
+  authors: Ferreira, O. P.
+  title: Local convergence of Newton's method in Banach space from the viewpoint of the majorant principle
+  journal: IMA Journal of Numerical Analysis
+  volume: "29"
+  issue: "3"
+  pages: 746–759
+  doi: 10.1093/imanum/drn036
+- year: 2009
+  authors: Ferreira, O. P.; Oliveira, P. R.; Silva, R. C. M.
+  title: On the convergence of the entropy-exponential penalty trajectories and generalized proximal point methods in semidefinite optimization
+  journal: Journal of Global Optimization
+  volume: "45"
+  issue: "2"
+  pages: 211–227
+  doi: 10.1007/s10898-008-9367-x
+- year: 2008
+  authors: Cruz Neto, J. X.; Ferreira, O. P.; Oliveira, P. R.; Silva, R. C. M.
+  title: Central paths in semidefinite programming, generalized proximal-point method and Cauchy trajectories in Riemannian manifolds
+  journal: Journal of Optimization Theory and Applications
+  volume: "139"
+  issue: "2"
+  pages: 227–242
+  doi: 10.1007/s10957-008-9422-2
+- year: 2008
+  authors: Ferreira, O. P.
+  title: Dini derivative and a characterization for Lipschitz and convex functions on Riemannian manifolds
+  journal: "Nonlinear Analysis: Theory, Methods and Applications"
+  volume: "68"
+  issue: "6"
+  pages: 1517–1528
+  doi: 10.1016/j.na.2006.12.038
+- year: 2007
+  authors: Cruz Neto, J. X.; Ferreira, O. P.; Iusem, A. N.; Monteiro, R. D. C.
+  title: Dual convergence of the proximal point method with Bregman distances for linear programming
+  journal: Optimization Methods and Software
+  volume: "22"
+  issue: "2"
+  pages: 339–360
+  doi: 10.1080/10556780600565083
+- year: 2006
+  authors: Cruz Neto, J. X.; Ferreira, O. P.; Lucambio Pérez, L. R.; Németh, S. Z.
+  title: Convex- and monotone-transformable mathematical programming problems and a proximal-like point method
+  journal: Journal of Global Optimization
+  volume: "35"
+  issue: "1"
+  pages: 53–69
+  doi: 10.1007/s10898-005-6741-9
+- year: 2006
+  authors: Ferreira, O. P.
+  title: Convexity with respect to a differential equation
+  journal: Journal of Mathematical Analysis and Applications
+  volume: "315"
+  issue: "2"
+  pages: 626–641
+  doi: 10.1016/j.jmaa.2005.04.048
+- year: 2006
+  authors: Ferreira, O. P.
+  title: Proximal subgradient and a characterization of Lipschitz function on Riemannian manifolds
+  journal: Journal of Mathematical Analysis and Applications
+  volume: "313"
+  issue: "2"
+  pages: 587–597
+  doi: 10.1016/j.jmaa.2005.08.049
+- year: 2005
+  authors: Cruz Neto, J. X.; Ferreira, O. P.; Monteiro, R. D. C.
+  title: Asymptotic behavior of the central path for a special class of degenerate SDP problems
+  journal: Mathematical Programming
+  volume: "103"
+  issue: "3"
+  pages: 487–514
+  doi: 10.1007/s10107-004-0555-2
+- year: 2005
+  authors: Ferreira, O. P.; Lucambio Pérez, L. R.; Németh, S. Z.
+  title: Singularities of monotone vector fields and an extragradient-type algorithm
+  journal: Journal of Global Optimization
+  volume: "31"
+  issue: "1"
+  pages: 133–151
+  doi: 10.1007/s10898-003-3780-y
+- year: 2002
+  authors: Cruz Neto, J. X.; Ferreira, O. P.; Lucambio Pérez, L. R.
+  title: Contributions to the study of monotone vector fields
+  journal: Acta Mathematica Hungarica
+  volume: "94"
+  issue: "4"
+  pages: 307–320
+  doi: 10.1023/A:1015643612729
+- year: 2002
+  authors: Ferreira, O. P.; Svaiter, B. F.
+  title: Kantorovich's theorem on Newton's method in Riemannian manifolds
+  journal: Journal of Complexity
+  volume: "18"
+  issue: "1"
+  pages: 304–329
+  doi: 10.1006/jcom.2001.0582
+- year: 2002
+  authors: Ferreira, O. P.; Oliveira, P. R.
+  title: Proximal point algorithm on Riemannian manifolds
+  journal: Optimization
+  volume: "51"
+  issue: "2"
+  pages: 257–270
+  doi: 10.1080/02331930290019413
+- year: 2000
+  authors: Cruz Neto, J. X.; Ferreira, O. P.; Lucambio Pérez, L. R.
+  title: Monotone point-to-set vector field
+  journal: Balkan Journal of Geometry and its Applications
+  volume: "5"
+  issue: "1"
+  pages: 69–79
+- year: 2000
+  authors: Cruz Neto, J. X.; Ferreira, O. P.
+  title: Q-quadratic convergence on Newton's method from data at one point
+  journal: International Journal of Applied Mathematics
+  volume: "3"
+  issue: "4"
+  pages: 441–447
+- year: 2000
+  authors: Iusem, A. N.; Lucambio Pérez, L. R.
+  title: An extragradient-type algorithm for non-smooth variational inequalities
+  journal: Optimization
+  volume: "48"
+  issue: "3"
+  pages: 309–332
+  doi: 10.1080/02331930008844508
+- year: 1999
+  authors: Cruz Neto, J. X.; Ferreira, O. P.; Lucambio Pérez, L. R.
+  title: A proximal regularization of the steepest descent method in Riemannian manifolds
+  journal: Balkan Journal of Geometry and its Applications
+  volume: "4"
+  issue: "2"
+  pages: 1–8
+- year: 1998
+  authors: Ferreira, O. P.; Oliveira, P. R.
+  title: Subgradient algorithm on Riemannian manifolds
+  journal: Journal of Optimization Theory and Applications
+  volume: "97"
+  issue: "1"
+  pages: 93–104
+  doi: 10.1023/A:1022675100677

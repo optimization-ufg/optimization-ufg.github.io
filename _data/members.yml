@@ -1,0 +1,200 @@
+# Membros do grupo. Cada item começa com "- name:". Campos opcionais podem ser omitidos.
+# orcid: só o número (0000-0000-0000-0000); scholar: só o código depois de user=.
+
+faculty:
+  - name: Glaydston de Carvalho Bento
+    url: https://glaydston.ime.ufg.br/
+    lattes: http://lattes.cnpq.br/1089906772427394
+    orcid: "0000-0001-6983-4132"
+    scholar: 5gEy66oAAAAJ
+  - name: Jefferson D. Gonçalves de Melo
+    url: https://jefferson.ime.ufg.br/
+    lattes: http://lattes.cnpq.br/8296171010616435
+    orcid: "0000-0002-9659-5437"
+    scholar: jq_ArKoAAAAJ
+  - name: Layane Rodrigues de Souza Queiroz
+    url: https://sigaa.sistemas.ufg.br/sigaa/public/docente/portal.jsf?siape=4875243
+    lattes: http://lattes.cnpq.br/6022029299719695
+    orcid: "0000-0001-5296-2779"
+    scholar: Vvv4G2EAAAAJ
+  - name: Leandro da Fonseca Prudente
+    url: https://lfprudente.github.io/
+    lattes: http://lattes.cnpq.br/4573611419840935
+    orcid: "0000-0003-1098-4317"
+    scholar: cwNIOlYAAAAJ
+  - name: Luis Román Lucambio Pérez
+    url: https://luisroman.ime.ufg.br/
+    lattes: http://lattes.cnpq.br/6532280983965503
+    orcid: 0000-0001-8755-285X
+    scholar: BnHBi-IAAAAJ
+  - name: Maurício Silva Louzeiro
+    url: https://sites.google.com/view/mauriciosilvalouzeiro/biography
+    lattes: http://lattes.cnpq.br/3049272965306538
+    orcid: "0000-0002-4755-3505"
+    scholar: 6rZauzYAAAAJ
+  - name: Max Leandro Nobre Gonçalves
+    url: https://maxlng.ime.ufg.br/
+    lattes: http://lattes.cnpq.br/7841103869154032
+    orcid: "0000-0001-9563-1101"
+    scholar: VrOunJMAAAAJ
+  - name: Oliviana Xavier do Nascimento
+    lattes: http://lattes.cnpq.br/6311524634045213
+    orcid: "0000-0002-6863-4371"
+  - name: Orizon Pereira Ferreira
+    url: https://orizon.ime.ufg.br/
+    lattes: http://lattes.cnpq.br/0201145506453251
+    orcid: "0000-0002-5758-0320"
+    scholar: Gj5lA-YAAAAJ
+  - name: Thiago Alves de Queiroz
+    url: https://sites.google.com/ufg.br/taq
+    lattes: http://lattes.cnpq.br/8041183668335400
+    orcid: "0000-0003-2674-3366"
+    scholar: vZFsnkUAAAAJ
+
+former_faculty:
+  - name: Gilson do Nascimento Silva
+    years: 2019–2020
+    lattes: http://lattes.cnpq.br/4038914959688015
+    scholar: Ew8ZLZIAAAAJ
+  - name: José Yunier Bello Cruz
+    years: 2009–2016
+    url: https://sites.google.com/site/joseyunierbellocruz/
+    lattes: http://lattes.cnpq.br/8377200040018415
+    scholar: 02oIwBUAAAAJ
+
+postdocs:
+  - name: Gemayqzel Bouza Allende
+    affiliation: Universidad de La Habana
+  - name: Jorge Ginart Barrios
+    affiliation: Universidad de La Habana
+  - name: Erik Alex Papa Quiroz
+    affiliation: Universidad Nacional Mayor de San Marcos
+
+phd_students:
+  - name: Alejandra Muñoz González
+  - name: Claudemir Rodrigues Santiago
+  - name: José Roberto Ribeiro Júnior
+  - name: Vilmar Gehlen Filho
+
+phd_graduates:
+  - name: Paulo César da Silva Júnior
+    year: 2025
+    lattes: http://lattes.cnpq.br/4587921937083978
+  - name: Tiago Sousa Mota
+    year: 2025
+    lattes: http://lattes.cnpq.br/8357755340945597
+  - name: Danilo Rodrigues de Souza
+    year: 2023
+    lattes: http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4831147U5
+  - name: Fernando Santana Lima
+    year: 2022
+    lattes: http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4645671P7
+  - name: Flávio Pinto Vieira
+    year: 2022
+    lattes: http://lattes.cnpq.br/2909116354914927
+  - name: Ademir Alves Aguiar
+    year: 2021
+    lattes: http://lattes.cnpq.br/3692268466405845
+  - name: Elianderson Meneses Santos
+    year: 2021
+    lattes: http://lattes.cnpq.br/5616849221888239
+  - name: Pedro Bonfim de Assunção Filho
+    year: 2021
+    lattes: http://lattes.cnpq.br/2338264779032585
+  - name: Ray Victor Guimarães Serra
+    year: 2021
+    lattes: http://lattes.cnpq.br/3405104515048327
+  - name: Tiago da Costa Menezes
+    year: 2021
+    lattes: http://lattes.cnpq.br/3488753474548145
+  - name: Fabiana Rodrigues de Oliveira
+    year: 2019
+    lattes: http://lattes.cnpq.br/8929908824371424
+  - name: Fabrícia Rodrigues de Oliveira
+    year: 2019
+    lattes: http://lattes.cnpq.br/5988282255296542
+  - name: Lucas Vidal de Meireles
+    year: 2019
+    lattes: http://lattes.cnpq.br/9108358595172188
+  - name: Maurício Silva Louzeiro
+    year: 2019
+    lattes: http://lattes.cnpq.br/3049272965306538
+  - name: Vando Antônio Adona
+    year: 2019
+    lattes: http://lattes.cnpq.br/5115225898624770
+  - name: Gilson do Nascimento Silva
+    year: 2017
+    lattes: http://lattes.cnpq.br/4038914959688015
+  - name: Valdinês Leite de Sousa Júnior
+    year: 2017
+    lattes: http://lattes.cnpq.br/0144367956615652
+  - name: Yuri Rafael Leite Pereira
+    year: 2017
+    lattes: http://lattes.cnpq.br/1028873654940434
+  - name: Edvaldo Elias Almeida Batista
+    year: 2016
+    lattes: http://lattes.cnpq.br/7305686829898878
+  - name: Reinier Díaz Millán
+    year: 2015
+    lattes: http://lattes.cnpq.br/1735483952302662
+  - name: Tibério Bittencourt de Oliveira Martins
+    year: 2015
+    lattes: http://lattes.cnpq.br/1431321280502484
+
+masters_graduates:
+  - name: Iago Victor Pires de Sousa Nunes
+    year: 2026
+  - name: Vilmar Gehlen Filho
+    year: 2025
+  - name: Marcus Vinicius de Morais Chagas
+    year: 2023
+  - name: Douglas Nascimento Ribeiro
+    year: 2022
+  - name: Danilo Rodrigues de Souza
+    year: 2019
+  - name: Ruby Yohana Cuero Zuñiga
+    year: 2019
+  - name: Stefan Alberto Gómez Guevara
+    year: 2017
+  - name: Maurício Silva Louzeiro
+    year: 2016
+  - name: Ademir Alves Aguiar
+    year: 2014
+  - name: Vando Antônio Adona
+    year: 2014
+  - name: Rayner Ferreira Barbosa da Costa
+    year: 2013
+  - name: José Carlos Rubianes Silva
+    year: 2011
+  - name: Milton Gabriel Gracia dos Santos
+    year: 2011
+  - name: Abiel Costa Macedo
+    year: 2009
+  - name: Kelvin Rodrigues Couto
+    year: 2009
+  - name: Lays Grazielle Cardoso Silva de Jesús
+    year: 2009
+  - name: Érika Morais Martins
+    year: 2007
+  - name: Hebert Coelho da Silva
+    year: 2007
+  - name: Luis Enrique Zelaya De los Santos
+    year: 2007
+  - name: Marcos Vinícius Lopes
+    year: 2007
+  - name: Max Leandro Nobre Gonçalves
+    year: 2007
+  - name: Paulo Alexandre Oliveira
+    year: 2007
+  - name: Fernando Ricardo Moreira
+    year: 2006
+  - name: Paulo César da Silva Júnior
+    year: 2003
+  - name: Selma Marques de Paiva
+    year: 2001
+  - name: Magda Cristina Moura
+    year: 2000
+  - name: Sandra Regina Perez da Silva
+    year: 1999
+  - name: Wanessa Quinta
+    year: 1999

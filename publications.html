@@ -1,0 +1,21 @@
+---
+layout: default
+title: Publications
+permalink: /publications/
+---
+<p>Journal articles by members of the group, published while at UFG.</p>
+{% assign pubs = site.data.publications | sort_natural: "authors" %}
+{% assign years = site.data.publications | map: "year" | uniq | sort | reverse | join: "," %}
+{% assign groups = "to appear," | append: years | split: "," %}
+{% for g in groups %}
+  {% assign n = 0 %}
+  {% for p in pubs %}{% assign py = p.year | append: "" %}{% if g == "to appear" and p.status == "to appear" %}{% assign n = n | plus: 1 %}{% elsif g != "to appear" and p.status != "to appear" and py == g %}{% assign n = n | plus: 1 %}{% endif %}{% endfor %}
+  {% if n > 0 %}
+<h2>{% if g == "to appear" %}To appear{% else %}{{ g }}{% endif %}</h2>
+<ol class="pubs">
+  {% for p in pubs %}{% assign py = p.year | append: "" %}{% assign show = false %}{% if g == "to appear" and p.status == "to appear" %}{% assign show = true %}{% elsif g != "to appear" and p.status != "to appear" and py == g %}{% assign show = true %}{% endif %}{% if show %}{% assign last = p.authors | slice: -1 %}{% capture ref %}{% if p.volume %}{{ p.volume }}{% if p.issue %}({{ p.issue }}){% endif %}{% endif %}{% if p.pages %}{% if p.volume %}, {% endif %}{{ p.pages }}{% endif %}{% endcapture %}
+  <li>{{ p.authors }}{% unless last == "." %}.{% endunless %} {% if p.doi %}<a href="https://doi.org/{{ p.doi }}">{{ p.title | escape }}</a>{% elsif p.url %}<a href="{{ p.url }}">{{ p.title | escape }}</a>{% else %}{{ p.title | escape }}{% endif %}. <em>{{ p.journal }}</em>, {% if p.status == "to appear" and p.volume == nil %}to appear.{% else %}{% if ref != "" %}{{ ref }}, {% endif %}{{ p.year }}.{% endif %}</li>
+  {% endif %}{% endfor %}
+</ol>
+  {% endif %}
+{% endfor %}

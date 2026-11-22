@@ -1,0 +1,13 @@
+---
+layout: default
+title: Seminars
+permalink: /seminars/
+---
+<p>Seminars are held at IME/UFG unless otherwise stated. Everyone interested is welcome.</p>
+<table class="sem-index">
+<thead><tr><th>Semester</th><th>Organizer</th></tr></thead>
+<tbody>
+{% assign sems = site.seminars | sort: "semester" | reverse %}
+{% for s in sems %}<tr><td>{% if s.talks.size > 0 %}<a href="{{ s.url | relative_url }}">{{ s.semester }}</a>{% else %}{{ s.semester }}{% endif %}</td><td>{{ s.organizer }}</td></tr>
+{% endfor %}</tbody>
+</table>

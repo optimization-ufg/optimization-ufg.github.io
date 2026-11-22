@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<p>The <strong>Continuous Optimization Group</strong> at the <a href="https://www.ufg.br/">Federal University of Goiás</a> (UFG) is affiliated with the <a href="https://posgraduacao.ime.ufg.br">Graduate Program in Mathematics</a> at the <a href="https://ime.ufg.br">Institute of Mathematics and Statistics</a> (IME).</p>
+<figure class="photo">
+  <img src="{{ '/assets/img/group.jpg' | relative_url }}" alt="Members of the group in front of IME/UFG">
+  <figcaption>Members of the group in front of IME/UFG.</figcaption>
+</figure>
+<p>Our current interests encompass both theoretical and computational aspects of nonlinear programming, including variational inequalities, multiobjective and vector optimization, generalized equations, and optimization on Riemannian manifolds. The group also works on combinatorial optimization and operations research, with applications to cutting and packing, vehicle routing, and scheduling problems.</p>
+<h2>Members</h2>
+<ul>
+{% for m in site.data.members.faculty %}  <li>{% if m.url %}<a href="{{ m.url }}">{{ m.name }}</a>{% else %}{{ m.name }}{% endif %}</li>
+{% endfor %}</ul>
+<p>More information about the group is available in the <a href="http://dgp.cnpq.br/dgp/espelhogrupo/6563390775207220">CNPq Directory of Research Groups</a> (in Portuguese).</p>
+<h2>Contact</h2>
+<p>Instituto de Matemática e Estatística, Universidade Federal de Goiás<br>Campus Samambaia, 74690-900 Goiânia, GO, Brazil<br>Phone: +55 62 3521-1208 · Fax: +55 62 3521-1180</p>
