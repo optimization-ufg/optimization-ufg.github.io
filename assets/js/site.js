@@ -3,6 +3,11 @@
   var store = { get: function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
                 set: function (k, v) { try { localStorage.setItem(k, v); } catch (e) {} } };
 
+  // links para outros sites abrem em outra aba
+  [].forEach.call(document.querySelectorAll('a[href^="http"]'), function (a) {
+    if (a.host !== location.host) { a.target = '_blank'; a.rel = 'noopener'; }
+  });
+
   // modo escuro
   var tb = document.querySelector('.theme-btn');
   if (tb) tb.addEventListener('click', function () {
