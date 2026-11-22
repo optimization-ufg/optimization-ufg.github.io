@@ -1,51 +1,63 @@
 # Membros do grupo. Cada item começa com "- name:". Campos opcionais podem ser omitidos.
+# cite: como o nome aparece nas publicações (usado para destacar em negrito e no filtro).
+# photo: opcional, caminho de uma foto em assets/img/people/.
 # orcid: só o número (0000-0000-0000-0000); scholar: só o código depois de user=.
 
 faculty:
   - name: Glaydston de Carvalho Bento
+    cite: Bento, G. C.
     url: https://glaydston.ime.ufg.br/
     lattes: http://lattes.cnpq.br/1089906772427394
     orcid: "0000-0001-6983-4132"
     scholar: 5gEy66oAAAAJ
   - name: Jefferson D. Gonçalves de Melo
+    cite: Melo, J. G.
     url: https://jefferson.ime.ufg.br/
     lattes: http://lattes.cnpq.br/8296171010616435
     orcid: "0000-0002-9659-5437"
     scholar: jq_ArKoAAAAJ
   - name: Layane Rodrigues de Souza Queiroz
+    cite: Queiroz, L. R. S.
     url: https://sigaa.sistemas.ufg.br/sigaa/public/docente/portal.jsf?siape=4875243
     lattes: http://lattes.cnpq.br/6022029299719695
     orcid: "0000-0001-5296-2779"
     scholar: Vvv4G2EAAAAJ
   - name: Leandro da Fonseca Prudente
+    cite: Prudente, L. F.
     url: https://lfprudente.github.io/
     lattes: http://lattes.cnpq.br/4573611419840935
     orcid: "0000-0003-1098-4317"
     scholar: cwNIOlYAAAAJ
   - name: Luis Román Lucambio Pérez
+    cite: Lucambio Pérez, L. R.
     url: https://luisroman.ime.ufg.br/
     lattes: http://lattes.cnpq.br/6532280983965503
     orcid: 0000-0001-8755-285X
     scholar: BnHBi-IAAAAJ
   - name: Maurício Silva Louzeiro
+    cite: Louzeiro, M. S.
     url: https://sites.google.com/view/mauriciosilvalouzeiro/biography
     lattes: http://lattes.cnpq.br/3049272965306538
     orcid: "0000-0002-4755-3505"
     scholar: 6rZauzYAAAAJ
   - name: Max Leandro Nobre Gonçalves
+    cite: Gonçalves, M. L. N.
     url: https://maxlng.ime.ufg.br/
     lattes: http://lattes.cnpq.br/7841103869154032
     orcid: "0000-0001-9563-1101"
     scholar: VrOunJMAAAAJ
   - name: Oliviana Xavier do Nascimento
+    cite: Nascimento, O. X.
     lattes: http://lattes.cnpq.br/6311524634045213
     orcid: "0000-0002-6863-4371"
   - name: Orizon Pereira Ferreira
+    cite: Ferreira, O. P.
     url: https://orizon.ime.ufg.br/
     lattes: http://lattes.cnpq.br/0201145506453251
     orcid: "0000-0002-5758-0320"
     scholar: Gj5lA-YAAAAJ
   - name: Thiago Alves de Queiroz
+    cite: Queiroz, T. A.
     url: https://sites.google.com/ufg.br/taq
     lattes: http://lattes.cnpq.br/8041183668335400
     orcid: "0000-0003-2674-3366"
@@ -54,10 +66,12 @@ faculty:
 former_faculty:
   - name: Gilson do Nascimento Silva
     years: 2019–2020
+    cite: Silva, G. N.
     lattes: http://lattes.cnpq.br/4038914959688015
     scholar: Ew8ZLZIAAAAJ
   - name: José Yunier Bello Cruz
     years: 2009–2016
+    cite: Bello Cruz, J. Y.
     url: https://sites.google.com/site/joseyunierbellocruz/
     lattes: http://lattes.cnpq.br/8377200040018415
     scholar: 02oIwBUAAAAJ
@@ -72,11 +86,12 @@ postdocs:
 
 phd_students:
   - name: Alejandra Muñoz González
-  - name: Claudemir Rodrigues Santiago
   - name: José Roberto Ribeiro Júnior
   - name: Vilmar Gehlen Filho
 
 phd_graduates:
+  - name: Claudemir Rodrigues Santiago
+    year: 2026
   - name: Paulo César da Silva Júnior
     year: 2025
     lattes: http://lattes.cnpq.br/4587921937083978

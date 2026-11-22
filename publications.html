@@ -1,21 +1,46 @@
 ---
 layout: default
 title: Publications
+eyebrow: Research output
+lead: Journal articles by members of the group, published while at UFG.
 permalink: /publications/
 ---
-<p>Journal articles by members of the group, published while at UFG.</p>
+{% assign M = site.data.members %}
 {% assign pubs = site.data.publications | sort_natural: "authors" %}
 {% assign years = site.data.publications | map: "year" | uniq | sort | reverse | join: "," %}
 {% assign groups = "to appear," | append: years | split: "," %}
+<div class="pubs-layout">
+  <nav class="yearnav" id="yearnav" aria-label="Years">
+  {% for g in groups %}{% assign n = 0 %}{% for p in pubs %}{% assign py = p.year | append: "" %}{% if g == "to appear" and p.status == "to appear" %}{% assign n = n | plus: 1 %}{% elsif g != "to appear" and p.status != "to appear" and py == g %}{% assign n = n | plus: 1 %}{% endif %}{% endfor %}{% if n > 0 %}
+    <a href="#y-{{ g | replace: ' ', '-' }}" data-g="{{ g | replace: ' ', '-' }}">{% if g == "to appear" %}To appear{% else %}{{ g }}{% endif %} <span>{{ n }}</span></a>{% endif %}{% endfor %}
+  </nav>
+  <div>
+    <div class="toolbar">
+      <label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Search title, author or journal" aria-label="Search publications"></label>
+      <select id="member" aria-label="Filter by member">
+        <option value="">All members</option>
+        {% for m in M.faculty %}{% if m.cite %}<option value="{{ m.cite }}">{{ m.name }}</option>{% endif %}{% endfor %}
+        {% for m in M.former_faculty %}{% if m.cite %}<option value="{{ m.cite }}">{{ m.name }} (former)</option>{% endif %}{% endfor %}
+      </select>
+      <span class="result-count" id="count">{{ pubs.size }} articles</span>
+    </div>
+    <p class="empty" id="empty">No articles match your search.</p>
 {% for g in groups %}
   {% assign n = 0 %}
   {% for p in pubs %}{% assign py = p.year | append: "" %}{% if g == "to appear" and p.status == "to appear" %}{% assign n = n | plus: 1 %}{% elsif g != "to appear" and p.status != "to appear" and py == g %}{% assign n = n | plus: 1 %}{% endif %}{% endfor %}
   {% if n > 0 %}
-<h2>{% if g == "to appear" %}To appear{% else %}{{ g }}{% endif %}</h2>
-<ol class="pubs">
-  {% for p in pubs %}{% assign py = p.year | append: "" %}{% assign show = false %}{% if g == "to appear" and p.status == "to appear" %}{% assign show = true %}{% elsif g != "to appear" and p.status != "to appear" and py == g %}{% assign show = true %}{% endif %}{% if show %}{% assign last = p.authors | slice: -1 %}{% capture ref %}{% if p.volume %}{{ p.volume }}{% if p.issue %}({{ p.issue }}){% endif %}{% endif %}{% if p.pages %}{% if p.volume %}, {% endif %}{{ p.pages }}{% endif %}{% endcapture %}
-  <li>{{ p.authors }}{% unless last == "." %}.{% endunless %} {% if p.doi %}<a href="https://doi.org/{{ p.doi }}">{{ p.title | escape }}</a>{% elsif p.url %}<a href="{{ p.url }}">{{ p.title | escape }}</a>{% else %}{{ p.title | escape }}{% endif %}. <em>{{ p.journal }}</em>, {% if p.status == "to appear" and p.volume == nil %}to appear.{% else %}{% if ref != "" %}{{ ref }}, {% endif %}{{ p.year }}.{% endif %}</li>
+    <section class="year-group" id="y-{{ g | replace: ' ', '-' }}" data-g="{{ g | replace: ' ', '-' }}">
+      <h2>{% if g == "to appear" %}To appear{% else %}{{ g }}{% endif %} <span class="count">{{ n }}</span></h2>
+      <ol class="pub-list">
+  {% for p in pubs %}{% assign py = p.year | append: "" %}{% assign show = false %}{% if g == "to appear" and p.status == "to appear" %}{% assign show = true %}{% elsif g != "to appear" and p.status != "to appear" and py == g %}{% assign show = true %}{% endif %}{% if show %}{% assign a = p.authors | replace: "; ", ", " %}{% for m in M.faculty %}{% if m.cite %}{% assign b = "<b>" | append: m.cite | append: "</b>" %}{% assign a = a | replace: m.cite, b %}{% endif %}{% endfor %}{% for m in M.former_faculty %}{% if m.cite %}{% assign b = "<b>" | append: m.cite | append: "</b>" %}{% assign a = a | replace: m.cite, b %}{% endif %}{% endfor %}{% capture ref %}{% if p.volume %}{{ p.volume }}{% if p.issue %}({{ p.issue }}){% endif %}{% endif %}{% if p.pages %}{% if p.volume %}, {% endif %}{{ p.pages }}{% endif %}{% endcapture %}
+        <li class="pub" data-a="{{ p.authors | escape }}">{% if p.doi %}<a class="pub-title" href="https://doi.org/{{ p.doi }}">{{ p.title | escape }}</a>{% elsif p.url %}<a class="pub-title" href="{{ p.url }}">{{ p.title | escape }}</a>{% else %}<span class="pub-title">{{ p.title | escape }}</span>{% endif %}
+          <p class="pub-authors">{{ a }}</p>
+          <p class="pub-venue"><em>{{ p.journal }}</em>{% if ref != "" %}, {{ ref }}{% endif %}{% if p.status == "to appear" %}<span class="tag">To appear</span>{% else %}, {{ p.year }}{% endif %}</p>
+        </li>
   {% endif %}{% endfor %}
-</ol>
+      </ol>
+    </section>
   {% endif %}
 {% endfor %}
+  </div>
+</div>

@@ -1,30 +1,66 @@
 ---
 layout: default
 title: Members
+eyebrow: People
+lead: Faculty, students and alumni of the Continuous Optimization Group.
 permalink: /members/
 ---
 {% assign M = site.data.members %}
-<h2>Faculty</h2>
-<ul>
-{% for m in M.faculty %}  <li>{% if m.url %}<a href="{{ m.url }}">{{ m.name }}</a>{% else %}{{ m.name }}{% endif %} <span class="ids">{% if m.lattes %}<a href="{{ m.lattes }}">Lattes</a>{% endif %}{% if m.orcid %}<a href="https://orcid.org/{{ m.orcid }}">ORCID</a>{% endif %}{% if m.scholar %}<a href="https://scholar.google.com/citations?user={{ m.scholar }}">Scholar</a>{% endif %}</span></li>
-{% endfor %}</ul>
-<h2>Former faculty</h2>
-<ul>
-{% for m in M.former_faculty %}  <li>{% if m.url %}<a href="{{ m.url }}">{{ m.name }}</a>{% else %}{{ m.name }}{% endif %}{% if m.years %} ({{ m.years }}){% endif %} <span class="ids">{% if m.lattes %}<a href="{{ m.lattes }}">Lattes</a>{% endif %}{% if m.orcid %}<a href="https://orcid.org/{{ m.orcid }}">ORCID</a>{% endif %}{% if m.scholar %}<a href="https://scholar.google.com/citations?user={{ m.scholar }}">Scholar</a>{% endif %}</span></li>
-{% endfor %}</ul>
-<h2>Former postdoctoral researchers</h2>
-<ul>
-{% for m in M.postdocs %}  <li>{{ m.name }}{% if m.affiliation %} ({{ m.affiliation }}){% endif %}</li>
-{% endfor %}</ul>
-<h2>Current PhD students</h2>
-<ul>
-{% for m in M.phd_students %}  <li>{{ m.name }}</li>
-{% endfor %}</ul>
-<h2>PhD graduates</h2>
-<ul>
-{% for m in M.phd_graduates %}  <li>{{ m.name }}{% if m.year %} ({{ m.year }}){% endif %}{% if m.note %} · {% if m.note_url %}<a href="{{ m.note_url }}">{{ m.note }}</a>{% else %}{{ m.note }}{% endif %}{% endif %} <span class="ids">{% if m.lattes %}<a href="{{ m.lattes }}">Lattes</a>{% endif %}</span></li>
-{% endfor %}</ul>
-<h2>Master's graduates</h2>
-<ul>
-{% for m in M.masters_graduates %}  <li>{{ m.name }}{% if m.year %} ({{ m.year }}){% endif %}</li>
-{% endfor %}</ul>
+{% assign pubs = site.data.publications %}
+
+<section class="block" id="faculty">
+  <div class="block-head"><h2>Faculty</h2><span class="count">{{ M.faculty.size }}</span></div>
+  <div class="people">
+  {% for m in M.faculty %}{% assign parts = m.name | split: " " %}{% assign n = 0 %}{% if m.cite %}{% for p in pubs %}{% if p.authors contains m.cite %}{% assign n = n | plus: 1 %}{% endif %}{% endfor %}{% endif %}
+    <article class="person">
+      {% if m.photo %}<img class="avatar" src="{{ m.photo | relative_url }}" alt="">{% else %}<div class="avatar" aria-hidden="true">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</div>{% endif %}
+      <div>
+        <h3>{% if m.url %}<a href="{{ m.url }}">{{ m.name }}</a>{% else %}{{ m.name }}{% endif %}</h3>
+        <p class="sub">{% if n > 0 %}<a href="{{ '/publications/' | relative_url }}?member={{ m.cite | url_encode }}">{{ n }} article{% if n > 1 %}s{% endif %} on this site</a>{% else %}IME/UFG{% endif %}</p>
+        <div class="ids">{% if m.url %}<a href="{{ m.url }}">Homepage</a>{% endif %}{% if m.lattes %}<a href="{{ m.lattes }}">Lattes</a>{% endif %}{% if m.orcid %}<a href="https://orcid.org/{{ m.orcid }}">ORCID</a>{% endif %}{% if m.scholar %}<a href="https://scholar.google.com/citations?user={{ m.scholar }}">Scholar</a>{% endif %}</div>
+      </div>
+    </article>
+  {% endfor %}
+  </div>
+</section>
+
+<section class="block" id="students">
+  <div class="block-head"><h2>Current PhD students</h2><span class="count">{{ M.phd_students.size }}</span></div>
+  <ul class="namechips">{% for m in M.phd_students %}<li>{{ m.name }}</li>{% endfor %}</ul>
+</section>
+
+<div class="cols-2">
+<section class="block" id="phd-graduates">
+  <div class="block-head"><h2>PhD graduates</h2><span class="count">{{ M.phd_graduates.size }}</span></div>
+  {% assign ys = M.phd_graduates | map: "year" | uniq %}
+  <dl class="timeline">
+  {% for y in ys %}<dt>{{ y }}</dt><dd>{% for m in M.phd_graduates %}{% if m.year == y %}<span>{% if m.lattes %}<a href="{{ m.lattes }}">{{ m.name }}</a>{% else %}{{ m.name }}{% endif %}{% if m.note %} <span class="note">{% if m.note_url %}<a href="{{ m.note_url }}">{{ m.note }}</a>{% else %}{{ m.note }}{% endif %}</span>{% endif %}</span>{% endif %}{% endfor %}</dd>
+  {% endfor %}</dl>
+</section>
+
+<section class="block" id="masters-graduates">
+  <div class="block-head"><h2>Master's graduates</h2><span class="count">{{ M.masters_graduates.size }}</span></div>
+  {% assign ys = M.masters_graduates | map: "year" | uniq %}
+  <dl class="timeline">
+  {% for y in ys %}<dt>{{ y }}</dt><dd>{% for m in M.masters_graduates %}{% if m.year == y %}<span>{{ m.name }}</span>{% endif %}{% endfor %}</dd>
+  {% endfor %}</dl>
+</section>
+</div>
+
+<section class="block" id="former">
+  <div class="block-head"><h2>Former faculty and postdocs</h2></div>
+  <div class="people">
+  {% for m in M.former_faculty %}{% assign parts = m.name | split: " " %}
+    <article class="person compact">
+      <div class="avatar" aria-hidden="true">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</div>
+      <div><h3>{% if m.url %}<a href="{{ m.url }}">{{ m.name }}</a>{% else %}{{ m.name }}{% endif %}</h3><p class="sub">Faculty{% if m.years %}, {{ m.years }}{% endif %}{% if m.lattes %} · <a href="{{ m.lattes }}">Lattes</a>{% endif %}{% if m.scholar %} · <a href="https://scholar.google.com/citations?user={{ m.scholar }}">Scholar</a>{% endif %}</p></div>
+    </article>
+  {% endfor %}
+  {% for m in M.postdocs %}{% assign parts = m.name | split: " " %}
+    <article class="person compact">
+      <div class="avatar" aria-hidden="true">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</div>
+      <div><h3>{{ m.name }}</h3><p class="sub">Postdoctoral researcher{% if m.affiliation %} · {{ m.affiliation }}{% endif %}</p></div>
+    </article>
+  {% endfor %}
+  </div>
+</section>

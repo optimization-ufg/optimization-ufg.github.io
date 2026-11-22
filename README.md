@@ -9,7 +9,8 @@ O site é gerado pelo GitHub Pages a partir dos arquivos deste repositório. Par
 | Professores, alunos, egressos | `_data/members.yml` |
 | Publicações | `_data/publications.yml` |
 | Seminários (um arquivo por semestre) | `_seminars/2026-1.md`, `_seminars/2026-2.md`, … |
-| Texto da página inicial | `index.html` |
+| Texto da página inicial (apresentação, áreas de pesquisa, contato) | `index.html` |
+| Fotos | `assets/img/` |
 | Links | `links.html` |
 | Visual (cores, fontes) | `assets/css/style.css` |
 
@@ -51,11 +52,14 @@ Para um semestre novo, crie `_seminars/2026-2.md` copiando um existente. Cada pa
       Segundo parágrafo (separe parágrafos com uma linha em branco).
 ```
 
-`time`, `affiliation` e `abstract` são opcionais. O semestre aparece sozinho na página Seminars.
+`time`, `affiliation` e `abstract` são opcionais. O semestre aparece sozinho na página Seminars, e as próximas palestras aparecem na página inicial. Fórmulas em LaTeX entre `$...$` são exibidas como matemática.
 
 ## Acrescentar um membro ou egresso
 
 Em `_data/members.yml`, nas seções `faculty`, `phd_students`, `phd_graduates`, `masters_graduates` etc. Para professores: `orcid` é só o número (`0000-0000-0000-0000`) e `scholar` é só o código que vem depois de `user=` no endereço do Google Scholar.
+
+- `cite` é o nome como aparece nas publicações (`Prudente, L. F.`). Com ele, o nome fica em negrito na lista de publicações, entra no filtro por membro e o cartão do professor mostra quantos artigos há no site.
+- Foto (opcional): envie uma imagem quadrada para `assets/img/people/` e acrescente `photo: /assets/img/people/nome.jpg`. Sem foto, o cartão mostra as iniciais.
 
 ## Testar antes de publicar (opcional)
 

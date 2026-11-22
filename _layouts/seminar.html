@@ -1,15 +1,33 @@
 ---
 layout: default
 ---
-<p class="meta">Organizer: {{ page.organizer }}. {% if page.note %}{{ page.note }}{% else %}Talks are held in the Lecture Room of IME/UFG unless otherwise stated.{% endif %}</p>
-{% for t in page.talks %}
-<div class="talk">
-  <p class="when">{% if t.date and t.date != "" %}{{ t.date | date: "%B %-d, %Y" }}{% endif %}{% if t.time %} · {{ t.time }}{% endif %}{% if t.canceled %} · canceled{% endif %}{% if t.continued %} · continued{% endif %}</p>
-  <h3>{{ t.title | escape }}</h3>
-  <p class="who"><strong>{{ t.speaker }}</strong>{% if t.affiliation %} · {{ t.affiliation }}{% endif %}{% if t.joint %} · joint work with {{ t.joint }}{% endif %}</p>
-  {% if t.abstract %}{% assign paras = t.abstract | strip | split: "
-
-" %}{% for para in paras %}<p>{{ para | strip }}</p>
-  {% endfor %}{% endif %}
+{% assign sems = site.seminars | sort: "semester" %}
+{% assign i = -1 %}{% for s in sems %}{% if s.url == page.url %}{% assign i = forloop.index0 %}{% endif %}{% endfor %}
+{% assign ip = i | minus: 1 %}{% assign inx = i | plus: 1 %}
+{% if page.talks.size > 0 %}
+<div class="talk-tools">
+  <span class="result-count">{{ page.talks.size }} talk{% if page.talks.size > 1 %}s{% endif %}</span>
+  <button class="linkbtn" type="button" id="toggle-abs">Expand all abstracts</button>
 </div>
+<div class="talks">
+{% for t in page.talks %}
+  <article class="talk{% if t.canceled %} canceled{% endif %}">
+    {% if t.date and t.date != "" %}<div class="datebadge"><span class="m">{{ t.date | date: "%b" }}</span><span class="d">{{ t.date | date: "%-d" }}</span><span class="y">{{ t.date | date: "%Y" }}</span></div>{% else %}<div class="datebadge"><span class="m">Date</span><span class="d">–</span></div>{% endif %}
+    <div>
+      <h2>{{ t.title | escape }}{% if t.canceled %}<span class="flag">Canceled</span>{% endif %}{% if t.continued %}<span class="flag" style="color:var(--muted)">Continued</span>{% endif %}</h2>
+      <p class="who"><strong>{{ t.speaker }}</strong>{% if t.affiliation %} · {{ t.affiliation }}{% endif %}{% if t.joint %} · joint work with {{ t.joint }}{% endif %}</p>
+      {% if t.date and t.date != "" %}<p class="when">{{ t.date | date: "%A, %B %-d, %Y" }}{% if t.time %} · {{ t.time }}{% endif %}</p>{% endif %}
+      {% if t.abstract %}<details><summary>Abstract</summary><div class="abstract">{% assign paras = t.abstract | strip | split: "
+
+" %}{% for para in paras %}<p>{{ para | strip }}</p>{% endfor %}</div></details>{% endif %}
+    </div>
+  </article>
 {% endfor %}
+</div>
+{% else %}
+<p class="empty" style="display:block">The program of this semester is not available.</p>
+{% endif %}
+<nav class="pager" aria-label="Other semesters">
+  {% if ip >= 0 %}{% assign s = sems[ip] %}<a class="prev" href="{{ s.url | relative_url }}"><small>← Previous</small>Seminar {{ s.semester }}</a>{% endif %}
+  {% if inx < sems.size %}{% assign s = sems[inx] %}<a class="next" href="{{ s.url | relative_url }}"><small>Next →</small>Seminar {{ s.semester }}</a>{% endif %}
+</nav>

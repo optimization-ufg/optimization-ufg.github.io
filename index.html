@@ -1,16 +1,102 @@
 ---
 layout: default
+hero: true
 ---
-<p>The <strong>Continuous Optimization Group</strong> at the <a href="https://www.ufg.br/">Federal University of Goiás</a> (UFG) is affiliated with the <a href="https://posgraduacao.ime.ufg.br">Graduate Program in Mathematics</a> at the <a href="https://ime.ufg.br">Institute of Mathematics and Statistics</a> (IME).</p>
-<figure class="photo">
-  <img src="{{ '/assets/img/group.jpg' | relative_url }}" alt="Members of the group in front of IME/UFG">
-  <figcaption>Members of the group in front of IME/UFG.</figcaption>
-</figure>
-<p>Our current interests encompass both theoretical and computational aspects of nonlinear programming, including variational inequalities, multiobjective and vector optimization, generalized equations, and optimization on Riemannian manifolds. The group also works on combinatorial optimization and operations research, with applications to cutting and packing, vehicle routing, and scheduling problems.</p>
-<h2>Members</h2>
-<ul>
-{% for m in site.data.members.faculty %}  <li>{% if m.url %}<a href="{{ m.url }}">{{ m.name }}</a>{% else %}{{ m.name }}{% endif %}</li>
-{% endfor %}</ul>
-<p>More information about the group is available in the <a href="http://dgp.cnpq.br/dgp/espelhogrupo/6563390775207220">CNPq Directory of Research Groups</a> (in Portuguese).</p>
-<h2>Contact</h2>
-<p>Instituto de Matemática e Estatística, Universidade Federal de Goiás<br>Campus Samambaia, 74690-900 Goiânia, GO, Brazil<br>Phone: +55 62 3521-1208 · Fax: +55 62 3521-1180</p>
+{% assign M = site.data.members %}
+{% assign ntalks = 0 %}{% for s in site.seminars %}{% assign ntalks = ntalks | plus: s.talks.size %}{% endfor %}
+{% assign sems = site.seminars | sort: "semester" | reverse %}
+<section class="band hero">
+  <div class="contours" aria-hidden="true"></div>
+  <div class="container">
+    <div>
+      <p class="eyebrow">IME · Federal University of Goiás</p>
+      <h1>Continuous <em>Optimization</em> Group</h1>
+      <p class="lead">We work on theoretical and computational aspects of optimization: nonlinear programming, variational inequalities, multiobjective and vector optimization, generalized equations, and optimization on Riemannian manifolds, as well as combinatorial optimization and operations research.</p>
+      <div class="btns">
+        <a class="btn btn-gold" href="{{ '/publications/' | relative_url }}">Publications <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="{{ '/seminars/' | relative_url }}">Seminar series</a>
+      </div>
+    </div>
+    <figure class="hero-photo">
+      <img src="{{ '/assets/img/faculty.jpg' | relative_url }}" alt="Members of the group in front of the IME/UFG building" width="1500" height="1000">
+      <figcaption>Members of the group in front of IME/UFG.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container">
+    <div class="stats-in">
+      <a class="stat" href="{{ '/members/' | relative_url }}"><span class="stat-n">{{ M.faculty.size }}</span><span class="stat-l">Faculty members</span></a>
+      <a class="stat" href="{{ '/publications/' | relative_url }}"><span class="stat-n">{{ site.data.publications.size }}</span><span class="stat-l">Journal articles</span></a>
+      <a class="stat" href="{{ '/members/#phd-graduates' | relative_url }}"><span class="stat-n">{{ M.phd_graduates.size }}</span><span class="stat-l">PhD graduates</span></a>
+      <a class="stat" href="{{ '/seminars/' | relative_url }}"><span class="stat-n">{{ ntalks }}</span><span class="stat-l">Seminar talks since 2011</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head"><div><p class="eyebrow">Research</p><h2>What we work on</h2></div></div>
+    <div class="prose"><p>The group is affiliated with the <a href="https://posgraduacao.ime.ufg.br">Graduate Program in Mathematics</a> at the <a href="https://ime.ufg.br">Institute of Mathematics and Statistics</a> (IME) of the <a href="https://www.ufg.br/">Federal University of Goiás</a> (UFG), where its members supervise master's and doctoral students.</p></div>
+    <div class="areas">
+      <div class="area"><div class="area-icon"><svg viewBox="0 0 24 24"><path d="M3 20c3-9 6-14 9-14s6 5 9 14"/><circle cx="12" cy="6" r="1.6"/></svg></div><h3>Nonlinear programming</h3><p>Theory and algorithms for constrained and unconstrained problems, with convergence and complexity analysis.</p></div>
+      <div class="area"><div class="area-icon"><svg viewBox="0 0 24 24"><path d="M4 18 12 4l8 14z"/><path d="M12 11v3"/><circle cx="12" cy="16.5" r=".6"/></svg></div><h3>Variational inequalities</h3><p>Variational inequalities, generalized equations and monotone operator methods.</p></div>
+      <div class="area"><div class="area-icon"><svg viewBox="0 0 24 24"><path d="M4 4v16h16"/><path d="M7 7c1 6 5 10 11 11"/><circle cx="9" cy="11" r="1"/><circle cx="13" cy="15" r="1"/></svg></div><h3>Multiobjective and vector optimization</h3><p>Pareto optimality and descent methods for problems with several conflicting objectives.</p></div>
+      <div class="area"><div class="area-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="9" ry="9"/><ellipse cx="12" cy="12" rx="9" ry="3.5"/><path d="M12 3c3 3 3 15 0 18"/></svg></div><h3>Riemannian optimization</h3><p>Optimization on Riemannian manifolds, including Hadamard manifolds and the geometry of algorithms.</p></div>
+      <div class="area"><div class="area-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="5" rx="1"/><rect x="13" y="10" width="8" height="11" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/></svg></div><h3>Combinatorial optimization</h3><p>Integer programming models and heuristics for hard discrete problems.</p></div>
+      <div class="area"><div class="area-icon"><svg viewBox="0 0 24 24"><circle cx="5" cy="18" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="17" cy="18" r="2"/><path d="M7 18h8M6.5 16.5 17.5 7.5M19 8v8"/></svg></div><h3>Operations research</h3><p>Applications to cutting and packing, vehicle routing and scheduling.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div>
+      <div class="section-head"><div><p class="eyebrow">Seminar {{ sems.first.semester }}</p><h2 id="talks-h">Recent talks</h2></div><a class="more" href="{{ sems.first.url | relative_url }}">All talks</a></div>
+      <ul class="talk-mini" id="talk-mini">
+      {% for t in sems.first.talks %}{% unless t.canceled %}
+        <li data-date="{{ t.date | date: '%Y-%m-%d' }}">
+          <div class="datebadge"><span class="m">{{ t.date | date: "%b" }}</span><span class="d">{{ t.date | date: "%-d" }}</span></div>
+          <div><h3><a href="{{ sems.first.url | relative_url }}">{{ t.title | escape }}</a></h3><p>{{ t.speaker }}{% if t.affiliation %} · {{ t.affiliation }}{% endif %}</p></div>
+        </li>{% endunless %}{% endfor %}
+      </ul>
+    </div>
+    <div>
+      <div class="section-head"><div><p class="eyebrow">Publications</p><h2>Latest articles</h2></div><a class="more" href="{{ '/publications/' | relative_url }}">All {{ site.data.publications.size }}</a></div>
+      <ul class="pub-mini">
+      {% assign recent = site.data.publications | sort: "year" | reverse %}
+      {% for p in recent limit: 5 %}
+        <li>{% if p.doi %}<a class="t" href="https://doi.org/{{ p.doi }}">{{ p.title | escape }}</a>{% else %}<span class="t">{{ p.title | escape }}</span>{% endif %}<span class="a">{{ p.authors | replace: "; ", ", " }} · <em>{{ p.journal }}</em>{% if p.status == "to appear" %}<span class="tag">To appear</span>{% else %}, {{ p.year }}{% endif %}</span></li>
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head"><div><p class="eyebrow">People</p><h2>Faculty, students and alumni</h2></div><a class="more" href="{{ '/members/' | relative_url }}">Members</a></div>
+    <figure class="wide-photo">
+      <img src="{{ '/assets/img/students.jpg' | relative_url }}" alt="Group members in a classroom at IME/UFG" loading="lazy" width="1500" height="1000">
+      <figcaption>Group members at IME/UFG. More information about the group is available in the <a href="http://dgp.cnpq.br/dgp/espelhogrupo/6563390775207220">CNPq Directory of Research Groups</a> (in Portuguese).</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="contact">
+      <div>
+        <p class="eyebrow" style="color:var(--primary)">Contact</p>
+        <h2>Visit us in Goiânia</h2>
+        <p>Talks of the seminar series are held in the Lecture Room of IME/UFG, on the Samambaia campus. Everyone interested is welcome.</p>
+      </div>
+      <dl>
+        <dt>Address</dt><dd>Instituto de Matemática e Estatística<br>Universidade Federal de Goiás<br>Campus Samambaia, 74690-900<br>Goiânia, GO, Brazil</dd>
+        <dt>Phone</dt><dd>+55 62 3521-1208</dd>
+        <dt>Fax</dt><dd>+55 62 3521-1180</dd>
+      </dl>
+    </div>
+  </div>
+</section>

@@ -1,13 +1,18 @@
 ---
 layout: default
 title: Seminars
+eyebrow: Seminar series
+lead: Research talks by members of the group and visitors, held at IME/UFG since 2011. Everyone interested is welcome.
 permalink: /seminars/
 ---
-<p>Seminars are held at IME/UFG unless otherwise stated. Everyone interested is welcome.</p>
-<table class="sem-index">
-<thead><tr><th>Semester</th><th>Organizer</th></tr></thead>
-<tbody>
 {% assign sems = site.seminars | sort: "semester" | reverse %}
-{% for s in sems %}<tr><td>{% if s.talks.size > 0 %}<a href="{{ s.url | relative_url }}">{{ s.semester }}</a>{% else %}{{ s.semester }}{% endif %}</td><td>{{ s.organizer }}</td></tr>
-{% endfor %}</tbody>
-</table>
+{% assign first = true %}
+<div class="sem-grid">
+{% for s in sems %}{% assign n = s.talks.size | default: 0 %}
+  {% if n > 0 %}<a class="sem-card{% if first %} latest{% endif %}" href="{{ s.url | relative_url }}">{% assign first = false %}{% else %}<div class="sem-card nolink">{% endif %}
+    <span class="s">{{ s.semester }}</span>
+    <span class="o">Organized by {{ s.organizer }}</span>
+    <span class="n">{% if n > 0 %}{{ n }} talk{% if n > 1 %}s{% endif %}{% if s.note %} · online{% endif %} →{% else %}Program not available{% endif %}</span>
+  {% if n > 0 %}</a>{% else %}</div>{% endif %}
+{% endfor %}
+</div>
