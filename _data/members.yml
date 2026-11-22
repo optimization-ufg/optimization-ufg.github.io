@@ -86,12 +86,16 @@ postdocs:
 
 phd_students:
   - name: Alejandra Muñoz González
+    lattes: http://lattes.cnpq.br/3207246500254778
   - name: José Roberto Ribeiro Júnior
+    lattes: http://lattes.cnpq.br/7375801203443744
   - name: Vilmar Gehlen Filho
+    lattes: http://lattes.cnpq.br/4636474390589112
 
 phd_graduates:
   - name: Claudemir Rodrigues Santiago
     year: 2026
+    lattes: http://lattes.cnpq.br/1737083154934876
   - name: Paulo César da Silva Júnior
     year: 2025
     lattes: http://lattes.cnpq.br/4587921937083978

@@ -26,7 +26,7 @@ permalink: /members/
 
 <section class="block" id="students">
   <div class="block-head"><h2>Current PhD students</h2><span class="count">{{ M.phd_students.size }}</span></div>
-  <ul class="namechips">{% for m in M.phd_students %}<li>{{ m.name }}</li>{% endfor %}</ul>
+  <ul class="namechips">{% for m in M.phd_students %}<li>{% if m.lattes %}<a href="{{ m.lattes }}" title="Lattes">{{ m.name }}</a>{% else %}{{ m.name }}{% endif %}</li>{% endfor %}</ul>
 </section>
 
 <div class="cols-2">
