@@ -351,3 +351,15 @@ a.sem-card:hover { text-decoration: none; box-shadow: var(--shadow-lg); transfor
   .toolbar { position: static; margin-top: 0; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* cartões dos professores com foto e mini bio */
+.people-faculty { grid-template-columns: repeat(auto-fill, minmax(460px, 1fr)); gap: 18px; }
+.people-faculty .person { grid-template-columns: 80px 1fr; gap: 20px; padding: 22px; align-items: start; }
+.people-faculty .avatar { width: 80px; height: 80px; font-size: 26px; }
+.people-faculty .person h3 { font-size: 19px; margin: 4px 0 8px; }
+.person .bio { font-size: 14.5px; line-height: 1.6; color: var(--ink); opacity: .86; margin: 0 0 10px; }
+@media (max-width: 760px) {
+  .people-faculty { grid-template-columns: 1fr; }
+  .people-faculty .person { grid-template-columns: 64px 1fr; gap: 14px; padding: 18px; }
+  .people-faculty .avatar { width: 64px; height: 64px; }
+}

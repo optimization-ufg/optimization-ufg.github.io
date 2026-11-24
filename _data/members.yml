@@ -2,13 +2,16 @@
 # cite: como o nome aparece nas publicações (usado para destacar em negrito e no filtro).
 # since: ano de entrada na UFG (as publicações automáticas só contam a partir dele).
 # github: opcional, usuário no GitHub (recebe aviso quando aparecem artigos novos seus).
-# photo: opcional, caminho de uma foto em assets/img/people/.
+# photo: opcional, foto quadrada em assets/img/people/ (sem foto, aparecem as iniciais).
+# bio: opcional, duas ou três frases em inglês.
 # orcid: só o número (0000-0000-0000-0000); scholar: só o código depois de user=.
 
 faculty:
   - name: Glaydston de Carvalho Bento
     cite: Bento, G. C.
     since: 2006
+    photo: /assets/img/people/bento.jpg
+    bio: "PhD in Systems Engineering and Computer Science, UFRJ (2009). Works on optimization on Hadamard and Riemannian manifolds, proximal methods, equilibrium problems and variational inequalities, and convergence under Kurdyka–Łojasiewicz-type conditions."
     url: https://glaydston.ime.ufg.br/
     lattes: http://lattes.cnpq.br/1089906772427394
     orcid: "0000-0001-6983-4132"
@@ -16,6 +19,8 @@ faculty:
   - name: Jefferson D. Gonçalves de Melo
     cite: Melo, J. G.
     since: 2010
+    photo: /assets/img/people/melo.jpg
+    bio: "PhD in Mathematics, IMPA (2009). Works on proximal and first-order methods, augmented Lagrangian methods for nonconvex composite problems, and multiobjective optimization, with emphasis on iteration-complexity analysis."
     url: https://jefferson.ime.ufg.br/
     lattes: http://lattes.cnpq.br/8296171010616435
     orcid: "0000-0002-9659-5437"
@@ -23,6 +28,8 @@ faculty:
   - name: Layane Rodrigues de Souza Queiroz
     cite: Queiroz, L. R. S.
     since: 2024
+    photo: /assets/img/people/lqueiroz.jpg
+    bio: "PhD in Computer Science and Computational Mathematics, USP (2022). Works on combinatorial optimization and operations research, including packing, scheduling and metaheuristics, with applications such as patient transport in hospitals."
     url: https://sigaa.sistemas.ufg.br/sigaa/public/docente/portal.jsf?siape=4875243
     lattes: http://lattes.cnpq.br/6022029299719695
     orcid: "0000-0001-5296-2779"
@@ -31,6 +38,8 @@ faculty:
     cite: Prudente, L. F.
     since: 2012
     github: lfprudente
+    photo: /assets/img/people/prudente.jpg
+    bio: "PhD in Applied Mathematics, UNICAMP (2012). Works on continuous optimization, mainly methods for multiobjective and vector optimization; other interests include nonlinear programming, augmented Lagrangian methods and numerical linear algebra for optimization."
     url: https://lfprudente.github.io/
     lattes: http://lattes.cnpq.br/4573611419840935
     orcid: "0000-0003-1098-4317"
@@ -38,6 +47,8 @@ faculty:
   - name: Luis Román Lucambio Pérez
     cite: Lucambio Pérez, L. R.
     since: 1997
+    photo: /assets/img/people/lucambio.jpg
+    bio: "PhD in Mathematics, IMPA (1997), after a degree in Mathematics from Humboldt University of Berlin. Full Professor at UFG; works on monotone vector fields, convex feasibility and vector optimization."
     url: https://luisroman.ime.ufg.br/
     lattes: http://lattes.cnpq.br/6532280983965503
     orcid: 0000-0001-8755-285X
@@ -45,6 +56,8 @@ faculty:
   - name: Maurício Silva Louzeiro
     cite: Louzeiro, M. S.
     since: 2023
+    photo: /assets/img/people/louzeiro.jpg
+    bio: "PhD in Mathematics, UFG (2019), followed by postdoctoral positions at TU Chemnitz and Dongguan University of Technology. Works on optimization on Riemannian manifolds, Newton-type and cubic regularization methods."
     url: https://sites.google.com/view/mauriciosilvalouzeiro/biography
     lattes: http://lattes.cnpq.br/3049272965306538
     orcid: "0000-0002-4755-3505"
@@ -52,6 +65,8 @@ faculty:
   - name: Max Leandro Nobre Gonçalves
     cite: Gonçalves, M. L. N.
     since: 2010
+    photo: /assets/img/people/goncalves.jpg
+    bio: "PhD in Systems Engineering and Computer Science, UFRJ (2011), and postdoctoral fellow at Georgia Tech (2015). Works on theory and methods for continuous optimization."
     url: https://maxlng.ime.ufg.br/
     lattes: http://lattes.cnpq.br/7841103869154032
     orcid: "0000-0001-9563-1101"
@@ -59,11 +74,15 @@ faculty:
   - name: Oliviana Xavier do Nascimento
     cite: Nascimento, O. X.
     since: 2026
+    photo: /assets/img/people/nascimento.jpg
+    bio: "PhD in Computer Science and Computational Mathematics, USP (2025). Works on operations research and optimization, including packing, vehicle routing and port logistics."
     lattes: http://lattes.cnpq.br/6311524634045213
     orcid: "0000-0002-6863-4371"
   - name: Orizon Pereira Ferreira
     cite: Ferreira, O. P.
     since: 1989
+    photo: /assets/img/people/ferreira.jpg
+    bio: "PhD in Systems Engineering and Computer Science, UFRJ (1997). Full Professor at UFG; works on theory and methods for continuous optimization, with specific interest in methods for Riemannian manifolds."
     url: https://orizon.ime.ufg.br/
     lattes: http://lattes.cnpq.br/0201145506453251
     orcid: "0000-0002-5758-0320"
@@ -71,6 +90,8 @@ faculty:
   - name: Thiago Alves de Queiroz
     cite: Queiroz, T. A.
     since: 2025
+    photo: /assets/img/people/tqueiroz.jpg
+    bio: "PhD in Computer Science, UNICAMP (2010), with postdoctoral and visiting positions at USP, Porto, KU Leuven, Modena and Reggio Emilia, and Mines Saint-Étienne. Works on combinatorial optimization (cutting and packing, vehicle routing, scheduling, facility location) with integer programming, exact algorithms and heuristics."
     url: https://sites.google.com/ufg.br/taq
     lattes: http://lattes.cnpq.br/8041183668335400
     orcid: "0000-0003-2674-3366"
