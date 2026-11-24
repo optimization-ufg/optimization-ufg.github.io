@@ -78,6 +78,7 @@ Em `_data/members.yml`, nas seções `faculty`, `phd_students`, `phd_graduates`,
 
 - `since` é o ano de entrada na UFG, usado pela busca automática de publicações. `github` (opcional) é o usuário no GitHub, para receber aviso de artigos novos.
 - `cite` é o nome como aparece nas publicações (`Prudente, L. F.`). Com ele, o nome fica em negrito na lista de publicações, entra no filtro por membro e o cartão do professor mostra quantos artigos há no site.
+- Egressos: `lattes` faz o nome virar link para o Lattes, e `thesis` (endereço da tese ou dissertação no [repositório da UFG](https://repositorio.bc.ufg.br/tede/)) acrescenta o link *Thesis* ou *Dissertation* ao lado do nome.
 - Foto (opcional): envie uma imagem quadrada para `assets/img/people/` e acrescente `photo: /assets/img/people/nome.jpg`. Sem foto, o cartão mostra as iniciais.
 
 ## Testar antes de publicar (opcional)

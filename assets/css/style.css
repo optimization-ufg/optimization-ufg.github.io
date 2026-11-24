@@ -216,6 +216,8 @@ a.stat:last-child { border-radius: 0 var(--radius) var(--radius) 0; }
 .timeline dd a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; }
 .timeline dd a:hover { color: var(--primary); text-decoration-color: currentColor; }
 .timeline .note { font-size: 12.5px; color: var(--muted); }
+.timeline dd a.doc { font-size: 12.5px; color: var(--muted); margin-left: 2px; white-space: nowrap; }
+.timeline dd a.doc:hover { color: var(--primary); }
 .cols-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
 
 /* publicações */

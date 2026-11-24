@@ -35,7 +35,7 @@ permalink: /members/
   <div class="block-head"><h2>PhD graduates</h2><span class="count">{{ M.phd_graduates.size }}</span></div>
   {% assign ys = M.phd_graduates | map: "year" | uniq %}
   <dl class="timeline">
-  {% for y in ys %}<dt>{{ y }}</dt><dd>{% for m in M.phd_graduates %}{% if m.year == y %}<span>{% if m.lattes %}<a href="{{ m.lattes }}">{{ m.name }}</a>{% else %}{{ m.name }}{% endif %}{% if m.note %} <span class="note">{% if m.note_url %}<a href="{{ m.note_url }}">{{ m.note }}</a>{% else %}{{ m.note }}{% endif %}</span>{% endif %}</span>{% endif %}{% endfor %}</dd>
+  {% for y in ys %}<dt>{{ y }}</dt><dd>{% for m in M.phd_graduates %}{% if m.year == y %}<span>{% if m.lattes %}<a href="{{ m.lattes }}" title="Lattes">{{ m.name }}</a>{% else %}{{ m.name }}{% endif %}{% if m.thesis %} <a class="doc" href="{{ m.thesis }}">Thesis</a>{% endif %}{% if m.note %} <span class="note">{% if m.note_url %}<a href="{{ m.note_url }}">{{ m.note }}</a>{% else %}{{ m.note }}{% endif %}</span>{% endif %}</span>{% endif %}{% endfor %}</dd>
   {% endfor %}</dl>
 </section>
 
@@ -43,7 +43,7 @@ permalink: /members/
   <div class="block-head"><h2>Master's graduates</h2><span class="count">{{ M.masters_graduates.size }}</span></div>
   {% assign ys = M.masters_graduates | map: "year" | uniq %}
   <dl class="timeline">
-  {% for y in ys %}<dt>{{ y }}</dt><dd>{% for m in M.masters_graduates %}{% if m.year == y %}<span>{{ m.name }}</span>{% endif %}{% endfor %}</dd>
+  {% for y in ys %}<dt>{{ y }}</dt><dd>{% for m in M.masters_graduates %}{% if m.year == y %}<span>{% if m.lattes %}<a href="{{ m.lattes }}" title="Lattes">{{ m.name }}</a>{% else %}{{ m.name }}{% endif %}{% if m.thesis %} <a class="doc" href="{{ m.thesis }}">Dissertation</a>{% endif %}</span>{% endif %}{% endfor %}</dd>
   {% endfor %}</dl>
 </section>
 </div>
