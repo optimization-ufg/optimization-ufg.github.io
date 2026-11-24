@@ -23,6 +23,14 @@
     var open = nav.classList.toggle('open'); nb.setAttribute('aria-expanded', open);
   });
 
+  // home: esconde eventos que já terminaram (o site só é regerado quando alguém edita)
+  var evsec = document.getElementById('events');
+  if (evsec) {
+    var hoje = new Date().toISOString().slice(0, 10);
+    [].forEach.call(evsec.querySelectorAll('.event'), function (e) { if (e.dataset.end < hoje) e.hidden = true; });
+    if (!evsec.querySelector('.event:not([hidden])')) evsec.hidden = true;
+  }
+
   // home: próximas palestras (ou as mais recentes)
   var tm = document.getElementById('talk-mini');
   if (tm) {

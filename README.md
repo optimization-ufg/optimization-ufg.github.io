@@ -72,6 +72,10 @@ Para um semestre novo, crie `_seminars/2026-2.md` copiando um existente. Cada pa
 
 `time`, `affiliation` e `abstract` são opcionais. O semestre aparece sozinho na página Seminars, e as próximas palestras aparecem na página inicial. Fórmulas em LaTeX entre `$...$` são exibidas como matemática.
 
+## Divulgar um evento
+
+Eventos ficam em `_data/events.yml` e aparecem na página inicial, logo abaixo dos números do grupo. Copie o item existente e ajuste. O campo `end` (data de término, `AAAA-MM-DD`) faz o evento sumir sozinho depois que termina. O cartaz (`poster`) é opcional: envie a imagem para `assets/img/events/`.
+
 ## Acrescentar um membro ou egresso
 
 Em `_data/members.yml`, nas seções `faculty`, `phd_students`, `phd_graduates`, `masters_graduates` etc. Para professores: `orcid` é só o número (`0000-0000-0000-0000`) e `scholar` é só o código que vem depois de `user=` no endereço do Google Scholar.

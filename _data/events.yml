@@ -1,0 +1,15 @@
+# Eventos divulgados na página inicial, logo abaixo dos números do grupo.
+# O evento some sozinho do site depois da data de término (end).
+# poster é opcional: uma imagem em assets/img/events/ (cerca de 900 px de altura basta).
+
+- name: V WOPTR
+  title: V Workshop on Continuous Optimization in Riemannian Manifolds
+  kind: International workshop organized by the group
+  dates: May 3–5, 2027
+  end: 2027-05-05
+  place: ADUFG Sindicato Auditorium, Goiânia, Brazil
+  description: An international forum bringing together researchers, faculty, postdocs and students to discuss recent advances in continuous optimization, with emphasis on optimization on Riemannian manifolds and its applications.
+  speakers: Alejandro Jofré, Boris Mordukhovich, Ernesto G. Birgin, João Carlos de Oliveira Souza, João Xavier da Cruz Neto, María Laura Schuverdt
+  url: https://woptr.ime.ufg.br/
+  register: https://woptr.ime.ufg.br/p/63835-registration
+  poster: /assets/img/events/woptr-2027.jpg
