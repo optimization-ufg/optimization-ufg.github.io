@@ -38,18 +38,19 @@ Em `_data/publications.yml`, copie um item existente e ajuste. A ordem no arquiv
 
 ## Publicações automáticas (OpenAlex)
 
-Toda segunda-feira, o GitHub procura no [OpenAlex](https://openalex.org), pelo ORCID de cada professor, artigos de revista que ainda não estão em `_data/publications.yml`. Só entram artigos publicados a partir do ano de entrada do professor na UFG (campo `since` em `_data/members.yml`).
+Toda segunda-feira, o GitHub consulta o [OpenAlex](https://openalex.org) pelo ORCID de cada professor e atualiza `_data/publications.yml` sozinho:
 
-Quando encontra artigos novos, ele abre um **pull request** (aba *Pull requests*) com os artigos já formatados. Nada vai para o site sem revisão:
+- acrescenta artigos de revista que ainda não estão no site, publicados a partir do ano de entrada do professor na UFG (campo `since` em `_data/members.yml`);
+- completa volume, número e páginas dos artigos marcados `to appear` que já saíram num número da revista.
 
-1. Abra o pull request e confira a lista em **Files changed**: título (só a primeira letra e nomes próprios em maiúscula), autores no formato `Sobrenome, I.`, nome da revista e se o artigo é do período na UFG.
-2. Para corrigir algo, edite o arquivo ali mesmo (⋯ → *Edit file*).
-3. Para recusar um artigo, apague-o e acrescente o DOI em `_data/publications-ignore.yml`, para que ele não volte a ser sugerido.
-4. Clique em **Merge pull request**. O site se atualiza em um ou dois minutos.
+As mudanças vão direto para o site. A cada atualização, o GitHub abre um aviso na aba *Issues* com a lista do que mudou, e quem acompanha o repositório recebe por e-mail (botão **Watch** → *All activity*). Professores com o campo `github` em `_data/members.yml` também são marcados no aviso quando aparece um artigo deles.
 
-Enquanto um pull request estiver aberto, a busca semanal não faz nada, para não apagar correções em andamento. Para rodar a busca na hora: aba *Actions* → *Atualizar publicações* → *Run workflow*.
+Se algo sair errado:
 
-Avisos por e-mail: o GitHub avisa quem acompanha o repositório (botão **Watch** → *All activity*). Professores com o campo `github` em `_data/members.yml` também são marcados como revisores quando aparece um artigo deles.
+- para corrigir título, autores ou revista, edite `_data/publications.yml`;
+- para remover um artigo (fora do período na UFG, duplicado etc.), apague-o desse arquivo e acrescente o DOI em `_data/publications-ignore.yml`, para que ele não volte.
+
+Depois de conferir, feche o aviso. Para rodar a busca na hora: aba *Actions* → *Atualizar publicações* → *Run workflow*.
 
 A busca depende do ORCID de cada professor estar atualizado. No ORCID, a opção que mantém tudo em dia é autorizar a Crossref (*Add works* → *Search & link* → Crossref), que envia sozinha os artigos novos com DOI.
 

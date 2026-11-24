@@ -1,5 +1,6 @@
-# Toda segunda-feira, procura no OpenAlex artigos novos dos professores (pelo ORCID)
-# e abre um pull request para revisão. Também pode ser rodado à mão em Actions → Run workflow.
+# Toda segunda-feira, procura no OpenAlex artigos novos dos professores (pelo ORCID) e completa
+# os "to appear" que já saíram. O resultado vai direto para o site, e um aviso (issue) lista o
+# que mudou. Também pode ser rodado à mão em Actions → Atualizar publicações → Run workflow.
 name: Atualizar publicações
 
 on:
@@ -9,7 +10,8 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
+  issues: write
+  pages: write
 
 concurrency: atualiza-publicacoes
 
@@ -18,39 +20,26 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ github.token }}
-      BRANCH: auto/publicacoes
     steps:
       - uses: actions/checkout@v4
 
-      - name: Já existe uma sugestão esperando revisão?
-        id: aberto
-        run: |
-          n=$(gh pr list --head "$BRANCH" --state open --json number --jq length)
-          echo "aberto=$n" >> "$GITHUB_OUTPUT"
-          if [ "$n" != "0" ]; then echo "Há um pull request aberto; nada a fazer até ele ser revisado."; fi
-
       - uses: ruby/setup-ruby@v1
-        if: steps.aberto.outputs.aberto == '0'
         with:
           ruby-version: "3.3"
 
-      - name: Buscar artigos novos no OpenAlex
+      - name: Buscar no OpenAlex
         id: busca
-        if: steps.aberto.outputs.aberto == '0'
         run: ruby scripts/atualiza-publicacoes.rb
 
-      - name: Abrir pull request
-        if: steps.aberto.outputs.aberto == '0' && steps.busca.outputs.novos != '0'
+      - name: Publicar e avisar
+        if: steps.busca.outputs.mudou == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git checkout -B "$BRANCH"
           git add _data/publications.yml
-          git commit -m "Publicações novas encontradas no OpenAlex"
-          git push -f origin "$BRANCH"
-          gh pr create --head "$BRANCH" --base main \
-            --title "Publicações novas (${{ steps.busca.outputs.novos }}) encontradas no OpenAlex" \
-            --body-file pr-body.md
-          if [ -n "${{ steps.busca.outputs.revisores }}" ]; then
-            gh pr edit "$BRANCH" --add-reviewer "${{ steps.busca.outputs.revisores }}" || true
-          fi
+          git commit -m "Publicações atualizadas pelo OpenAlex (${{ steps.busca.outputs.novos }} novas, ${{ steps.busca.outputs.atualizados }} to appear completadas)"
+          git push origin HEAD:main
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" >/dev/null || true
+          gh issue create \
+            --title "Publicações atualizadas: ${{ steps.busca.outputs.novos }} novas, ${{ steps.busca.outputs.atualizados }} completadas" \
+            --body-file aviso.md

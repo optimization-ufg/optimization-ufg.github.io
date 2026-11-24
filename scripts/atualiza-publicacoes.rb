@@ -1,13 +1,16 @@
-# Busca no OpenAlex, pelo ORCID de cada professor, artigos de revista que ainda não estão em
-# _data/publications.yml e os acrescenta ao fim do arquivo, no formato do site.
+# Mantém _data/publications.yml em dia usando o OpenAlex:
+#  1. procura, pelo ORCID de cada professor, artigos de revista que ainda não estão no arquivo
+#     e os acrescenta ao fim, no formato do site;
+#  2. completa volume, número e páginas dos artigos marcados "to appear" que já saíram num número
+#     da revista (só os que ainda não têm volume).
 #
-# Critério: artigo com DOI, publicado numa revista, a partir do ano de entrada do professor
-# na UFG (campo "since" em _data/members.yml). DOIs listados em _data/publications-ignore.yml
-# nunca são sugeridos.
+# Critério para artigos novos: com DOI, publicados numa revista, a partir do ano de entrada do
+# professor na UFG (campo "since" em _data/members.yml). DOIs listados em
+# _data/publications-ignore.yml nunca são acrescentados.
 #
 # Uso: ruby scripts/atualiza-publicacoes.rb [--dry-run]
-# Roda toda semana pelo GitHub Actions (.github/workflows/atualiza-publicacoes.yml), que abre um
-# pull request com o resultado para alguém revisar.
+# Roda toda semana pelo GitHub Actions (.github/workflows/atualiza-publicacoes.yml), que publica
+# o resultado e abre um aviso (issue) com a lista do que mudou.
 require 'net/http'
 require 'json'
 require 'yaml'
@@ -17,11 +20,18 @@ require 'uri'
 
 ROOT = File.expand_path('..', __dir__)
 PUBS = File.join(ROOT, '_data', 'publications.yml')
+AVISO = File.join(ROOT, 'aviso.md')
+REPO = ENV['GITHUB_REPOSITORY'] || 'optimization-ufg/optimization-ufg.github.io'
 DRY = ARGV.include?('--dry-run')
+ORDER = %w[year status authors title journal volume issue pages doi url].freeze
+
+def yload_text(s)
+  YAML.safe_load(s, permitted_classes: [Date])
+end
 
 def yload(path)
   return nil unless File.exist?(path)
-  YAML.safe_load(File.read(path, encoding: 'UTF-8'), permitted_classes: [Date]) || nil
+  yload_text(File.read(path, encoding: 'UTF-8'))
 end
 
 def get_json(url)
@@ -43,6 +53,38 @@ end
 
 def clean(s)
   CGI.unescapeHTML(s.to_s.gsub(/<[^>]+>/, '')).tr("‐‑", '--').gsub(/\s+/, ' ').strip
+end
+
+def doi_of(w)
+  w['doi'].to_s.sub(%r{\Ahttps?://(dx\.)?doi\.org/}i, '').downcase.strip
+end
+
+def pages_of(b)
+  p = [b['first_page'], b['last_page']].compact.map(&:to_s).reject(&:empty?).uniq.join('–')
+  p.empty? ? nil : p
+end
+
+def q(v)
+  s = v.to_s
+  needs = s.empty? || s =~ /\A[\s\-?:,\[\]{}#&*!|>'"%@`]/ || s.include?(': ') || s.include?(' #') ||
+          s.end_with?(':') || s =~ /\A[\d.]+\z/ || s =~ /\A(true|false|yes|no|null|on|off|~)\z/i
+  needs ? s.to_json : s
+end
+
+# Uma entrada do arquivo, na ordem de campos usada no site.
+def emit(h)
+  keys = ORDER + (h.keys - ORDER)
+  out = +''
+  keys.each do |k|
+    v = h[k]
+    next if v.nil? || v.to_s.empty? || k.start_with?('_')
+    v = if %w[volume issue pages].include?(k) then v.to_s.to_json
+        elsif k == 'year' then v
+        else q(v)
+        end
+    out << (out.empty? ? '- ' : '  ') << "#{k}: #{v}\n"
+  end
+  out
 end
 
 # ---------- dados atuais ----------
@@ -67,8 +109,7 @@ KEEP = %w[Riemannian Riemann Newton Hadamard Lipschitz Pareto Euclidean Banach H
           Ribière Dai Yuan Shamanskii Fischer Burmeister Stackelberg Nash Bellman Markov Monte Carlo
           Weiszfeld Fermat Torricelli Huber Dinkelbach]
 pubs.each do |p|
-  t = p['title'].to_s
-  t.split(/\s+/).each_with_index do |w, i|
+  p['title'].to_s.split(/\s+/).each_with_index do |w, i|
     next if i.zero?
     w.scan(/[[:alpha:]]+/).each { |part| KEEP << part if part =~ /\A[[:upper:]][[:lower:]]+\z/ }
   end
@@ -115,17 +156,9 @@ def journal_name(name, known)
   known.find { |j| key.(j) == key.(name) } || name
 end
 
-def q(v)
-  s = v.to_s
-  needs = s.empty? || s =~ /\A[\s\-?:,\[\]{}#&*!|>'"%@`]/ || s.include?(': ') || s.include?(' #') ||
-          s.end_with?(':') || s =~ /\A[\d.]+\z/ || s =~ /\A(true|false|yes|no|null|on|off|~)\z/i
-  needs ? s.to_json : s
-end
-
-# ---------- busca ----------
+# ---------- 1. artigos novos ----------
 FIELDS = 'id,doi,title,publication_year,type,primary_location,locations,authorships,biblio'
 found = {}
-warnings = []
 
 (members['faculty'] || []).each do |m|
   next unless m['orcid'] && m['since']
@@ -138,7 +171,7 @@ warnings = []
     data = get_json(url)
     (data['results'] || []).each do |w|
       n += 1
-      doi = w['doi'].to_s.sub(%r{\Ahttps?://(dx\.)?doi\.org/}i, '').downcase.strip
+      doi = doi_of(w)
       next if doi.empty? || doi.start_with?('10.48550/', '10.2139/', '10.5281/') # arXiv, SSRN, Zenodo
       next if have_doi.include?(doi) || ignore.include?(doi)
       loc = ([w['primary_location']] + (w['locations'] || [])).compact.find { |l| l.dig('source', 'type') == 'journal' }
@@ -157,70 +190,106 @@ warnings = []
   warn "#{m['name']}: #{n} artigos no OpenAlex desde #{m['since']}"
 end
 
-# ---------- formatação ----------
-entries = found.map do |doi, e|
+new_entries = found.map do |doi, e|
   w = e['w']
   b = w['biblio'] || {}
   authors = (w['authorships'] || []).map do |a|
     orcid = a.dig('author', 'orcid').to_s.sub(%r{\Ahttps?://orcid\.org/}, '')
     (by_orcid[orcid] && by_orcid[orcid]['cite']) || cite_name(a.dig('author', 'display_name') || a['raw_author_name'])
   end
-  pages = [b['first_page'], b['last_page']].compact.map(&:to_s).reject(&:empty?).uniq.join('–')
   {
     'year' => w['publication_year'],
     'status' => (b['volume'].to_s.empty? ? 'to appear' : nil),
     'authors' => authors.join('; '),
     'title' => sentence_case(e['title']),
     'journal' => journal_name(clean(e['loc'].dig('source', 'display_name')), journals),
-    'volume' => b['volume'], 'issue' => b['issue'], 'pages' => (pages.empty? ? nil : pages),
+    'volume' => b['volume'], 'issue' => b['issue'], 'pages' => pages_of(b),
     'doi' => doi,
     '_members' => e['members'].map { |m| m['name'] },
     '_github' => e['members'].map { |m| m['github'] }.compact
   }
 end.sort_by { |x| [-x['year'].to_i, x['authors']] }
 
-puts "#{entries.size} artigo(s) novo(s)"
-
-body = []
-if entries.any?
-  body << "O OpenAlex tem #{entries.size} artigo(s) dos professores que ainda não estão no site."
-  body << ''
-  body << 'Antes de aprovar, confira em **Files changed**: título (só a primeira letra e nomes próprios em maiúscula), nomes dos autores no formato `Sobrenome, I.`, nome da revista e se o artigo é mesmo do período na UFG.'
-  body << ''
-  body << '- Para corrigir algo, edite o arquivo nesta página (⋯ → Edit file) antes de aprovar.'
-  body << '- Para recusar um artigo, apague-o daqui e acrescente o DOI em `_data/publications-ignore.yml`, para que não volte a ser sugerido.'
-  body << ''
-  entries.each do |x|
-    st = x['status'] ? ' · *to appear*' : ''
-    body << "- **#{x['title']}**. #{x['journal']}, #{x['year']}#{st}. [doi](https://doi.org/#{x['doi']}) · #{x['_members'].join(', ')}"
+# ---------- 2. "to appear" que já saíram ----------
+pending = pubs.select { |p| p['status'] == 'to appear' && p['volume'].to_s.empty? && !p['doi'].to_s.empty? }
+published = {}
+pending.map { |p| p['doi'].to_s.downcase.strip }.each_slice(40) do |dois|
+  url = 'https://api.openalex.org/works?filter=' + URI.encode_www_form_component("doi:#{dois.join('|')}") +
+        '&select=doi,publication_year,biblio&per-page=50'
+  (get_json(url)['results'] || []).each do |w|
+    b = w['biblio'] || {}
+    published[doi_of(w)] = w unless b['volume'].to_s.empty?
   end
-  gh = entries.flat_map { |x| x['_github'] }.uniq
+end
+
+# ---------- grava ----------
+txt = File.read(PUBS, encoding: 'UTF-8')
+updated = []
+unless published.empty?
+  head, *blocks = txt.split(/^(?=- )/)
+  blocks.map! do |blk|
+    body, trail = blk.match(/\A(.*?\n)((?:[ \t]*(?:#.*)?\n)*)\z/m)&.captures || [blk, '']
+    h = (yload_text(body) || [])[0]
+    w = h && published[h['doi'].to_s.downcase.strip]
+    next blk unless w && h['status'] == 'to appear' && h['volume'].to_s.empty?
+    b = w['biblio']
+    h.delete('status')
+    h['year'] = w['publication_year'] if w['publication_year']
+    h['volume'] = b['volume']
+    h['issue'] = b['issue'] unless b['issue'].to_s.empty?
+    h['pages'] = pages_of(b) if pages_of(b)
+    updated << h
+    emit(h) + trail
+  end
+  txt = head + blocks.join
+end
+unless new_entries.empty?
+  txt << "\n" unless txt.end_with?("\n")
+  txt << "\n# Encontrados no OpenAlex em #{Date.today}\n"
+  new_entries.each { |x| txt << emit(x) }
+end
+changed = !(new_entries.empty? && updated.empty?)
+if changed && !DRY
+  yload_text(txt) # garante que o YAML continua válido antes de gravar
+  File.write(PUBS, txt)
+end
+
+# ---------- aviso ----------
+edit = "https://github.com/#{REPO}/edit/main/_data/publications.yml"
+ign = "https://github.com/#{REPO}/edit/main/_data/publications-ignore.yml"
+body = []
+if changed
+  body << 'A busca semanal no OpenAlex atualizou a lista de publicações do site.'
+  if new_entries.any?
+    body << '' << "**Artigos acrescentados (#{new_entries.size}):**" << ''
+    new_entries.each do |x|
+      st = x['status'] ? ' · *to appear*' : ''
+      body << "- #{x['title']}. *#{x['journal']}*, #{x['year']}#{st}. [DOI](https://doi.org/#{x['doi']}) · #{x['_members'].join(', ')}"
+    end
+  end
+  if updated.any?
+    body << '' << "**Artigos \"to appear\" que saíram num número da revista (#{updated.size}):**" << ''
+    updated.each do |h|
+      ref = [h['volume'], h['issue'] ? "(#{h['issue']})" : nil].compact.join
+      ref += ", #{h['pages']}" if h['pages']
+      body << "- #{h['title']}. *#{h['journal']}* #{ref}, #{h['year']}."
+    end
+  end
+  body << '' << 'Se algo estiver errado (título, autores, revista ou artigo fora do período na UFG):'
+  body << "- para corrigir, edite [`_data/publications.yml`](#{edit});"
+  body << "- para remover um artigo, apague-o desse arquivo e acrescente o DOI em [`_data/publications-ignore.yml`](#{ign}), para que não volte."
+  body << '' << 'Depois de conferir, pode fechar este aviso.'
+  gh = new_entries.flat_map { |x| x['_github'] }.uniq
   body << '' << "cc #{gh.map { |g| '@' + g }.join(' ')}" if gh.any?
 end
 
-unless DRY || entries.empty?
-  txt = File.read(PUBS, encoding: 'UTF-8')
-  txt << "\n" unless txt.end_with?("\n")
-  txt << "\n# Encontrados no OpenAlex em #{Date.today}\n"
-  entries.each do |x|
-    first = true
-    %w[year status authors title journal volume issue pages doi].each do |k|
-      v = x[k]
-      next if v.nil? || v.to_s.empty?
-      v = %w[volume issue pages].include?(k) ? v.to_s.to_json : (k == 'year' ? v : q(v))
-      txt << (first ? '- ' : '  ') << "#{k}: #{v}\n"
-      first = false
-    end
-  end
-  File.write(PUBS, txt)
-  YAML.safe_load(File.read(PUBS, encoding: 'UTF-8'), permitted_classes: [Date]) # garante que o YAML continua válido
-end
-
-File.write(File.join(ROOT, 'pr-body.md'), body.join("\n") + "\n") unless DRY
+puts "#{new_entries.size} novo(s), #{updated.size} to appear atualizado(s)"
+File.write(AVISO, body.join("\n") + "\n") if changed && !DRY
 if ENV['GITHUB_OUTPUT']
   File.open(ENV['GITHUB_OUTPUT'], 'a') do |f|
-    f.puts "novos=#{entries.size}"
-    f.puts "revisores=#{entries.flat_map { |x| x['_github'] }.uniq.join(',')}"
+    f.puts "mudou=#{changed}"
+    f.puts "novos=#{new_entries.size}"
+    f.puts "atualizados=#{updated.size}"
   end
 end
 puts body.join("\n") if DRY
