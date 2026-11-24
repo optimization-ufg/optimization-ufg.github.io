@@ -1,0 +1,4 @@
+# DOIs que a busca automática no OpenAlex nunca deve sugerir
+# (artigos fora do critério do site, editoriais, duplicatas etc.).
+# Formato: - doi: 10.xxxx/yyyy
+#            note: motivo (opcional)

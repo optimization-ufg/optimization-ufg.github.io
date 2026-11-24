@@ -17,3 +17,5 @@ defaults:
 
 exclude:
   - README.md
+  - scripts
+  - pr-body.md
