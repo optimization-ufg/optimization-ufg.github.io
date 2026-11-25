@@ -39,7 +39,7 @@ faculty:
     since: 2012
     github: lfprudente
     photo: /assets/img/people/prudente.jpg
-    bio: "PhD in Applied Mathematics, UNICAMP (2012). Works on continuous optimization, mainly methods for multiobjective and vector optimization; other interests include nonlinear programming, augmented Lagrangian methods and numerical linear algebra for optimization."
+    bio: "PhD in Applied Mathematics, UNICAMP (2012). Works on continuous optimization, mainly methods for multiobjective and vector optimization. Other interests include nonlinear programming, large-scale optimization and numerical linear algebra."
     url: https://lfprudente.github.io/
     lattes: http://lattes.cnpq.br/4573611419840935
     orcid: "0000-0003-1098-4317"
